@@ -1,177 +1,518 @@
+let track = (name: string) => {
+    let current = Date.now();
+    console.log("Duration of " + name + ": " + (current - start));
+    start = current;
+}
+
+let start = Date.now();
+
+import 'nativescript-angular/router';
+track("nativescript-angular/router");
+
+import { Component } from "@angular/core";
+track("nativescript-angular/router");
+
+import dialogs = require("ui/dialogs");
+track("nativescript-angular/router");
+
 import { ExamplesListComponent } from "./examples-list.component";
+track("ExamplesListComponent");
+
 import { ActionBarExamplesComponent } from "./ui-category/action-bar/action-bar-examples.component";
+track("ActionBarExamplesComponent");
+
 import { ActionItemsComponent } from "./ui-category/action-bar/action-items/action-items.component";
+track("ActionItemsComponent");
+
 import { NavigationButtonComponent } from "./ui-category/action-bar/navigation-button/navigation-button.component";
+track("NavigationButtonComponent");
+
 import { TitleComponent } from "./ui-category/action-bar/title/title.component";
+track("TitleComponent");
+
 import { ActivityIndicatorExamplesComponent } from "./ui-category/activity-indicator/activity-indicator-examples.component";
+track("ActivityIndicatorExamplesComponent");
+
 import { SettingBusyComponent } from "./ui-category/activity-indicator/setting-busy/setting-busy.component";
+track("SettingBusyComponent");
+
 import { AnimationsExamplesComponent } from "./ui-category/animations/animations-examples.component";
+track("AnimationsExamplesComponent");
+
 import { AnimatingPropertiesComponent } from "./ui-category/animations/animating-properties/animating-properties.component";
+track("AnimatingPropertiesComponent");
+
 import { ChainingAnimationsComponent } from "./ui-category/animations/chaining-animations/chaining-animations.component";
+track("ChainingAnimationsComponent");
+
 import { MultipleViewsComponent } from "./ui-category/animations/multiple-views/multiple-views.component";
+track("MultipleViewsComponent");
+
 import { ButtonExamplesComponent } from "./ui-category/button/button-examples.component";
+track("ButtonExamplesComponent");
+
 import { ButtonTextComponent } from "./ui-category/button/text/text.component";
+track("ButtonTextComponent");
+
 import { ButtonTapEventComponent } from "./ui-category/button/tap-event/tap-event.component";
+track("ButtonTapEventComponent");
+
 import { ButtonBindingTextComponent } from "./ui-category/button/binding-text/binding-text.component";
+track("ButtonBindingTextComponent");
+
 import { DatePickerExamplesComponent } from "./ui-category/date-picker/date-picker-examples.component";
+track("DatePickerExamplesComponent");
+
 import { ConfigureDatePickerComponent } from "./ui-category/date-picker/configure-date-picker/configure-date-picker.component";
+track("ConfigureDatePickerComponent");
+
 import { DialogsExamplesComponent } from "./ui-category/dialogs/dialogs-examples.component";
+track("DialogsExamplesComponent");
+
 import { ActionDialogComponent } from "./ui-category/dialogs/action-dialog/action-dialog.component";
+track("ActionDialogComponent");
+
 import { AlertDialogComponent } from "./ui-category/dialogs/alert-dialog/alert-dialog.component";
+track("AlertDialogComponent");
+
 import { ConfirmDialogComponent } from "./ui-category/dialogs/confirm-dialog/confirm-dialog.component";
+track("ConfirmDialogComponent");
+
 import { LoginDialogComponent } from "./ui-category/dialogs/login-dialog/login-dialog.component";
+track("LoginDialogComponent");
+
 import { PromptDialogComponent } from "./ui-category/dialogs/prompt-dialog/prompt-dialog.component";
+track("PromptDialogComponent");
+
 import { LayoutsExamplesComponent } from "./ui-category/layouts/layouts-examples.component";
+track("LayoutsExamplesComponent");
+
 import { AbsoluteLayoutComponent } from "./ui-category/layouts/absolute-layout/absolute-layout.component";
+track("AbsoluteLayoutComponent");
+
 import { DockLayoutComponent } from "./ui-category/layouts/dock-layout/dock-layout.component";
+track("DockLayoutComponent");
+
 import { GridLayoutComponent } from "./ui-category/layouts/grid-layout/grid-layout.component";
+track("GridLayoutComponent");
+
 import { StackLayoutComponent } from "./ui-category/layouts/stack-layout/stack-layout.component";
+track("StackLayoutComponent");
+
 import { WrapLayoutComponent } from "./ui-category/layouts/wrap-layout/wrap-layout.component";
+track("WrapLayoutComponent");
+
 import { TimePickerExamplesComponent } from "./ui-category/time-picker/time-picker-examples.component";
+track("TimePickerExamplesComponent");
+
 import { ConfigureTimePickerComponent } from "./ui-category/time-picker/configure-time-picker/configure-time-picker.component";
+track("ConfigureTimePickerComponent");
+
 import { LabelExamplesComponent } from "./ui-category/label/label-examples.component";
+track("ConfigureTimePickerComponent");
+
 import { CreatingLabelComponent } from "./ui-category/label/creating-label/creating-label.component";
+track("CreatingLabelComponent");
+
 import { ListPickerExamplesComponent } from "./ui-category/listpicker/listpicker-examples.component";
+track("ListPickerExamplesComponent");
+
 import { CreatingListPickerComponent } from "./ui-category/listpicker/creating-listpicker/creating-listpicker.component";
+track("CreatingListPickerComponent");
+
 import { UsingSelectedIndexExampleComponent } from "./ui-category/listpicker/using-selected-index/using-selected-index.component";
+track("UsingSelectedIndexExampleComponent");
+
 import { ListViewExamplesComponent } from "./ui-category/listview/listview-examples.component";
+track("ListViewExamplesComponent");
+
 import { CreatingListViewComponent } from "./ui-category/listview/creating-listview/creating-listview.component";
+track("CreatingListViewComponent");
+
 import { CustomizingListViewComponent } from "./ui-category/listview/customizing-listview/customizing-listview.component";
+track("CustomizingListViewComponent");
+
 import { UsingItemTemplateComponent } from "./ui-category/listview/using-item-template/using-item-template.component";
+track("UsingItemTemplateComponent");
+
 import { UsingAsyncPipeComponent } from "./ui-category/listview/using-async-pipe/using-async-pipe.component";
+track("UsingAsyncPipeComponent");
+
 import { ProgressExamplesComponent } from "./ui-category/progress/progress-examples.component";
+track("ProgressExamplesComponent");
+
 import { CreatingProgressComponent } from "./ui-category/progress/creating-progress/creating-progress.component";
+track("CreatingProgressComponent");
+
 import { SettingProgressComponent } from "./ui-category/progress/setting-progress/setting-progress.component";
+track("SettingProgressComponent");
+
 import { NgForRepeatItemsComponent } from "./ui-category/ng-directives/ngfor-items/repeat-items.component";
+track("NgForRepeatItemsComponent");
+
 import { ImageExamplesComponent } from "./ui-category/image/image-examples.component";
+track("ImageExamplesComponent");
+
 import { CreatingImageExampleComponent } from "./ui-category/image/creating-image/creating-image.component";
+track("CreatingImageExampleComponent");
+
 import { HtmlViewxamplesComponent } from "./ui-category/htmlview/htmlview-examples.component";
+track("HtmlViewxamplesComponent");
+
 import { CreatingHtmlViewExampleComponent } from "./ui-category/htmlview/creating-htmlview/creating-htmlview.component";
+track("CreatingHtmlViewExampleComponent");
+
 import { ScrollViewExamplesComponent } from "./ui-category/scroll-view/scroll-view-examples.component";
+track("ScrollViewExamplesComponent");
+
 import { ScrollViewHorizontalComponent } from "./ui-category/scroll-view/horizontal/scroll-view-horizontal.component";
+track("ScrollViewHorizontalComponent");
+
 import { ScrollViewVerticalComponent } from "./ui-category/scroll-view/vertical/scroll-view-vertical.component";
+track("ScrollViewVerticalComponent");
+
 import { ScrollEventComponent } from "./ui-category/scroll-view/scroll-event/scroll-event.component";
+track("ScrollEventComponent");
+
 import { SearchBarExamplesComponent } from "./ui-category/search-bar/search-bar-examples.component";
+track("SearchBarExamplesComponent");
+
 import { BasicSearchBarComponent } from "./ui-category/search-bar/basic-search-bar/basic-search-bar.component";
+track("BasicSearchBarComponent");
+
 import { ClearSearchBarComponent } from "./ui-category/search-bar/clear-search-bar/clear-search-bar.component";
+track("ClearSearchBarComponent");
+
 import { SearchBarBindingComponent } from "./ui-category/search-bar/search-bar-binding/search-bar-binding.component";
+track("SearchBarBindingComponent");
+
 import { SegmentedBarExamplesComponent } from "./ui-category/segmented-bar/segmented-bar-examples.component";
+track("SegmentedBarExamplesComponent");
+
 import { BasicSegmentedBarComponent } from "./ui-category/segmented-bar/basic-segmented-bar/basic-segmented-bar.component";
+track("BasicSegmentedBarComponent");
+
 import { SegmentedBarViewsComponent } from "./ui-category/segmented-bar/segmented-bar-views/segmented-bar-views.component";
+track("SegmentedBarViewsComponent");
+
 import { SliderExamplesComponent } from "./ui-category/slider/slider-examples.component";
+track("SliderExamplesComponent");
+
 import { BasicSliderComponent } from "./ui-category/slider/basic-slider/basic-slider.component";
+track("BasicSliderComponent");
+
 import { SliderAccessValueComponent } from "./ui-category/slider/slider-access-value-code/slider-access-value.component";
+track("SliderAccessValueComponent");
+
 import { SwitchExamplesComponent } from "./ui-category/switch/switch-examples.component";
+track("SwitchExamplesComponent");
+
 import { BasicSwitchComponent } from "./ui-category/switch/basic-switch/basic-switch.component";
+track("BasicSwitchComponent");
+
 import { DisableSwitchComponent } from "./ui-category/switch/disable-switch/disable-switch.component";
+track("DisableSwitchComponent");
+
 import { StylingSwitchComponent } from "./ui-category/switch/styling-switch/styling-switch.component";
+track("StylingSwitchComponent");
+
 import { TabViewExamplesComponent } from "./ui-category/tab-view/tab-view-examples.component";
+track("TabViewExamplesComponent");
+
 import { BasicTabViewComponent } from "./ui-category/tab-view/basic-tab-view/basic-tab-view.component";
+track("BasicTabViewComponent");
+
 import { TabViewItemsComponent } from "./ui-category/tab-view/tab-view-items/tab-view-items.component";
+track("TabViewItemsComponent");
+
 import { TextFieldExamplesComponent } from "./ui-category/text-field/text-field-examples.component";
+track("TextFieldExamplesComponent");
+
 import { BasicTextFieldComponent } from "./ui-category/text-field/basic-text-field/basic-text-field.component";
+track("BasicTextFieldComponent");
+
 import { TextFieldBindingComponent } from "./ui-category/text-field/text-field-binding/text-field-binding.component";
+track("TextFieldBindingComponent");
+
 import { TextViewExamplesComponent } from "./ui-category/text-view/text-view-examples.component";
+track("TextViewExamplesComponent");
+
 import { BasicTextViewComponent } from "./ui-category/text-view/basic-text-view/basic-text-view.component";
+track("BasicTextViewComponent");
+
 import { WebViewExamplesComponent } from "./ui-category/web-view/web-view-examples.component";
+track("WebViewExamplesComponent");
+
 import { BasicWebViewComponent } from "./ui-category/web-view/basic-web-view/basic-web-view.component";
+track("BasicWebViewComponent");
+
 import { WebViewHtmlComponent } from "./ui-category/web-view/web-view-html/web-view-html.component";
+track("WebViewHtmlComponent");
+
 import { StyleExamplesComponent } from "./ui-category/style/style-examples.component";
+track("StyleExamplesComponent");
+
 import { StyleCSSFileComponent } from "./ui-category/style/style-css-file/style-css-file.component";
+track("StyleCSSFileComponent");
+
 import { ApplyStyleCodeComponent } from "./ui-category/style/apply-style-via-code/apply-style-code.component";
+track("ApplyStyleCodeComponent");
+
 import { GesturesExamplesComponent } from "./ui-category/gestures/gestures-examples.component";
+track("GesturesExamplesComponent");
+
 import { TapExampleComponent } from "./ui-category/gestures/tap/tap.component";
+track("TapExampleComponent");
+
 import { DoubleTapExampleComponent } from "./ui-category/gestures/double-tap/double-tap.component";
+track("DoubleTapExampleComponent");
+
 import { LongPressExampleComponent } from "./ui-category/gestures/long-press/long-press.component";
+track("LongPressExampleComponent");
+
 import { SwipeExampleComponent } from "./ui-category/gestures/swipe/swipe.component";
+track("SwipeExampleComponent");
+
 import { PanExampleComponent } from "./ui-category/gestures/pan/pan.component";
+track("PanExampleComponent");
+
 import { PinchExampleComponent } from "./ui-category/gestures/pinch/pinch.component";
+track("PinchExampleComponent");
+
 import { RotationExampleComponent } from "./ui-category/gestures/rotation/rotation.component";
+track("RotationExampleComponent");
+
 import { TouchExampleComponent } from "./ui-category/gestures/touch/touch.component";
+track("TouchExampleComponent");
+
 import { NgDirectivesExamplesComponent } from "./ui-category/ng-directives/ng-directives-examples.component";
+track("NgDirectivesExamplesComponent");
+
 import { UsingNgIfComponent } from "./ui-category/ng-directives/using-ngif/using-ngif.component";
+track("UsingNgIfComponent");
+
 import { UsingNgIfForPlatformSpecificComponent } from "./ui-category/ng-directives/using-ngif-for-platform-specific/using-ngif-for-platform-specific.component";
+track("UsingNgIfForPlatformSpecificComponent");
+
 import { CreateCustomDirectiveExampleComponent } from "./ui-category/ng-directives/create-custom-directive/create-custom-directive.component";
+track("CreateCustomDirectiveExampleComponent");
+
 import { UnlessDirectiveExampleComponent } from "./ui-category/ng-directives/unless-directive/unless-directive.component";
+track("UnlessDirectiveExampleComponent");
+
 import { UsingNgSwitchExamplesComponent } from "./ui-category/ng-directives/ngswitch-usage/ngswitch-usage.component";
+track("UsingNgSwitchExamplesComponent");
+
 import { FormattedStringExamplesComponent } from "./ui-category/formatted-string/formated-string-examples.component";
+track("FormattedStringExamplesComponent");
+
 import { CreateFormattedStringComponent } from "./ui-category/formatted-string/create-formatted-string/create-formatted-string.component";
+track("CreateFormattedStringComponent");
+
 import { TraceExamplesComponent } from "./trace/trace-examples.component";
+track("TraceExamplesComponent");
+
 import { TraceSpecificCategoriesExampleComponent } from "./trace/trace-specific-categories/trace-specific-categories-example.component";
+track("TraceSpecificCategoriesExampleComponent");
+
 import { CustomTraceWriterExampleComponent } from "./trace/custom-tracewriter/custom-tracewriter-example.component";
+track("CustomTraceWriterExampleComponent");
+
 import { TimerExamplesComponent } from "./timer/timer-examples.component";
+track("TimerExamplesComponent");
+
 import { SetIntervalTimerModuleExampleComponent } from "./timer/setinterval-timer-module-example/setinterval-timer-module-example";
+track("SetIntervalTimerModuleExampleComponent");
+
 import { SettimeoutTimerModuleExample } from "./timer/settimeout-timer-module-example/settimeout-timer-module-example";
+track("SettimeoutTimerModuleExample");
+
 import { PlatformExamplesComponent } from "./platform/platform-examples.component";
+track("PlatformExamplesComponent");
+
 import { PlatformModuleExampleComponent } from "./platform/platform-module-example/platform-module-example";
+track("PlatformModuleExampleComponent");
+
 import { LocationExamplesComponent } from "./location/location-examples.component";
+track("LocationExamplesComponent");
+
 import { BasicLocationExampleComponent } from "./location/basic-location-example/basic-location-example";
+track("BasicLocationExampleComponent");
+
 import { LocationMonitoringExampleComponent } from "./location/location-monitoring-example/location-monitoring-example";
+track("LocationMonitoringExampleComponent");
+
 import { FPSExamplesComponent } from "./fpsMeter/fps-meter-examples.component";
+track("FPSExamplesComponent");
+
 import { FPSMeterModuleExampleComponent } from "./fpsMeter/fps-meter-module-example/fps-meter-module-example";
+track("FPSMeterModuleExampleComponent");
+
 import { HTTPModuleComponent } from "./httpModule/http-module-examples.component";
+track("HTTPModuleComponent");
+
 import { HTTPModulePostExampleComponent } from "./httpModule/http-module-post/http-module-post";
+track("HTTPModulePostExampleComponent");
+
 import { HTTPModuleGetExampleComponent } from "./httpModule/http-module-get/http-module-get";
+track("HTTPModuleGetExampleComponent");
+
 import { ApplicationExamplesComponent } from "./application/application-examples.component";
+track("ApplicationExamplesComponent");
+
 import { AppCheckingTargetExampleComponent } from "./application/app-checking-target/app-checking-target.component";
+track("AppCheckingTargetExampleComponent");
+
 import { AppUsingAndroidExampleComponent } from "./application/app-using-android-specifics/app-using-android-specifics.component";
+track("AppUsingAndroidExampleComponent");
+
 import { AppUsingIosExampleComponent } from "./application/app-using-ios-specifics/app-using-ios-specifics.component";
+track("AppUsingIosExampleComponent");
+
 import { ApplicationSettingsExamplesComponent } from "./application-settings/application-settings-examples.component"
+track("ApplicationSettingsExamplesComponent");
+
 import { ValuesExampleComponent } from "./application-settings/values/values.component"
+track("ValuesExampleComponent");
+
 import { ColorExamplesComponent } from "./color/color-examples.component";
+track("ColorExamplesComponent");
+
 import { CreatingColorsExampleComponent, HexPipe } from "./color/creating-colors/creating-colors.component";
 import { ConnectivityExamplesComponent } from "./connectivity/connectivity-examples.component";
+track("ConnectivityExamplesComponent");
+
 import { UsingConnectivityExampleComponent } from "./connectivity/using-connectivity/using-connectivity.component";
+track("UsingConnectivityExampleComponent");
+
 import { FetchExamplesComponent } from "./fetch/fetch-examples.component";
+track("FetchExamplesComponent");
+
 import { FetchGetExampleComponent } from "./fetch/fetch-get/fetch-get.component";
+track("FetchGetExampleComponent");
+
 import { FetchPostExampleComponent } from "./fetch/fetch-post/fetch-post.component";
+track("FetchPostExampleComponent");
+
 import { FileSystemxamplesComponent } from "./file-system/file-system-examples.component";
+track("FileSystemxamplesComponent");
+
 import { PathsExampleComponent } from "./file-system/paths/paths.component";
+track("PathsExampleComponent");
+
 import { CreateExampleComponent } from "./file-system/create/create.component";
+track("CreateExampleComponent");
+
 import { ReadExampleComponent } from "./file-system/read/read.component";
+track("ReadExampleComponent");
+
 import { UpdateExampleComponent } from "./file-system/update/update.component";
+track("UpdateExampleComponent");
+
 import { DeleteExampleComponent } from "./file-system/delete/delete.component";
+track("DeleteExampleComponent");
+
 import { ModalPageExamplesComponent } from "./modal-page/modal-page-examples.component";
+track("ModalPageExamplesComponent");
+
 import { SampleModalPageModuleExampleComponent } from "./modal-page/sample-modal-page-module-example/sample-modal-page-module-example";
+track("SampleModalPageModuleExampleComponent");
+
 
 import { ExtendedListViewExamplesComponent } from "./common-screens-category/listview/extended-listview-examples.component";
+track("ExtendedListViewExamplesComponent");
+
 import { SingleLineListViewExampleComponent } from "./common-screens-category/listview/single-line/single-line-listview.component";
+track("SingleLineListViewExampleComponent");
+
 import { GroupedSingleLineListViewExampleComponent } from "./common-screens-category/listview/single-line-grouped/grouped-single-line.component";
+track("GroupedSingleLineListViewExampleComponent");
+
 import { TwoLineListViewExampleComponent } from "./common-screens-category/listview/two-line/two-line-listview.component";
+track("TwoLineListViewExampleComponent");
+
 import { MultiLineListViewExampleComponent } from "./common-screens-category/listview/multi-line/multi-line.component";
+track("MultiLineListViewExampleComponent");
+
 import { MultiLineGroupedListViewExampleComponent } from "./common-screens-category/listview/multi-line-grouped/multi-line-grouped.component";
+track("MultiLineGroupedListViewExampleComponent");
+
 import { MultiLineBigListViewExampleComponent } from "./common-screens-category/listview/multi-line-big/multi-line-big.component";
+track("MultiLineBigListViewExampleComponent");
+
 import { GroupedTwoLinesListViewExampleComponent } from "./common-screens-category/listview/two-lines-grouped/grouped-two-lines.component";
+track("GroupedTwoLinesListViewExampleComponent");
+
 import { CardsListViewExampleComponent } from "./common-screens-category/listview/cards/cards-listview.component";
+track("CardsListViewExampleComponent");
+
 import { HorizontalScrollingExampleComponent } from "./common-screens-category/listview/horizontal-scrolling/horizontal-scrolling.component";
+track("HorizontalScrollingExampleComponent");
+
 import { HeaderWithMapExampleComponent } from "./common-screens-category/listview/header-with-map/header-with-map.component";
+track("HeaderWithMapExampleComponent");
+
 
 import { ContentScreensExamplesComponent } from "./common-screens-category/content-screens/content-screens-examples.component";
+track("ContentScreensExamplesComponent");
+
 import { ContentPageExampleComponent } from "./common-screens-category/content-screens/content/content-example.component";
+track("ContentPageExampleComponent");
+
 import { ContentScrollablePageExampleComponent } from "./common-screens-category/content-screens/content-scrollable/content-scrollable-example.component";
+track("ContentScrollablePageExampleComponent");
+
 
 import { ExtendedDataEntryExamplesComponent } from "./common-screens-category/dataentry/extended-dataentry-examples.component";
+track("ExtendedDataEntryExamplesComponent");
+
 import { WelcomeDataEntryExampleComponent } from "./common-screens-category/dataentry/dataentry-welcome/dataentry-welcome.component";
+track("WelcomeDataEntryExampleComponent");
+
 import { SocialLoginDataEntryExampleComponent } from "./common-screens-category/dataentry/dataentry-sociallogin/dataentry-sociallogin.component";
+track("SocialLoginDataEntryExampleComponent");
+
 import { SignupDataEntryExampleComponent } from "./common-screens-category/dataentry/dataentry-signup/dataentry-signup.component";
+track("SignupDataEntryExampleComponent");
+
 import { ExtendedUserProfileExamplesComponent } from "./common-screens-category/userprofile/extended-userprofile-examples.component";
+track("ExtendedUserProfileExamplesComponent");
+
 import { UserFeedImagesExampleComponent } from "./common-screens-category/userprofile/user-feed-images/user-feed-images.component";
+track("UserFeedImagesExampleComponent");
+
 import { UserSettingsMenuExampleComponent } from "./common-screens-category/userprofile/user-settings-menu/user-settings-menu.component";
+track("UserSettingsMenuExampleComponent");
+
 import { UserFeedExampleComponent } from "./common-screens-category/userprofile/user-feed/user-feed.component";
+track("UserFeedExampleComponent");
+
 
 import { FlexboxLayoutComponentOne } from "./ui-category/layouts/flexbox-layout-one/flexbox-layout.component";
+track("FlexboxLayoutComponentOne");
+
 import { FlexboxLayoutComponentTwo } from "./ui-category/layouts/flexbox-layout-two/flexbox-layout.component";
+track("FlexboxLayoutComponentTwo");
+
 import { FlexboxLayoutComponentThree } from "./ui-category/layouts/flexbox-layout-three/flexbox-layout.component";
+track("FlexboxLayoutComponentThree");
+
 
 import { CameraExamplesComponent } from "./camera/camera-examples.component";
+track("CameraExamplesComponent");
+
 import { UsingCameraExampleComponent } from "./camera/using-camera/using-camera.component";
+track("UsingCameraExampleComponent");
+
+
+track("all imports...");
 
 export var routableComponents = [];
 export var examplePipes = [
     HexPipe
 ];
 
-export const routes = [
+export var routes = [
     routeEntry({ path: "", component: ExamplesListComponent, data: { title: "NativeScript Code Samples" } }),
     routeEntry({ path: "actionBarExamplesComponent", component: ActionBarExamplesComponent, data: { title: "ActionBar" } }),
     routeEntry({ path: "actionItemsComponent", component: ActionItemsComponent, data: { title: "Action items" } }),
@@ -338,10 +679,17 @@ export const routes = [
     routeEntry({ path: "flexboxLayoutComponentThree", component: FlexboxLayoutComponentThree, data: { title: "FlexboxLayout III" } }),  
 
     routeEntry({ path: "cameraExamplesComponent", component: CameraExamplesComponent, data: { title: "Camera" } }),
-    routeEntry({ path: "usingCameraExampleComponent", component: UsingCameraExampleComponent, data: { title: "Using camera" } }),     
+    routeEntry({ path: "usingCameraExampleComponent", component: UsingCameraExampleComponent, data: { title: "Using camera" } }),
+
+    
 ];
+
+// One route:
+routes = [routes[0]];
 
 function routeEntry(data) {
     routableComponents.push(data.component)
     return data;
 }
+
+track("routing end!");
