@@ -1,6 +1,21 @@
-import { Component, ChangeDetectionStrategy }  from "@angular/core";
+declare var __startCPUProfiler;
+declare var __stopCPUProfiler;
+//console.log(`>>> __startCPUProfiler("AppComponent");`);
+__startCPUProfiler("ExamplesListComponent_ngAfterContentInit");
 
+import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./link";
+
+let track = (name: string) => {
+    let current = Date.now();
+    let elapsedTime = current - start;
+    if (elapsedTime > 100){
+        console.log(`>>> ${name}: ${elapsedTime} ms`);
+    }
+    start = current;
+}
+
+let start = Date.now();
 
 var mainMenuLinks = [
     new Link("ActionBar", "/actionBarExamplesComponent"),
@@ -72,5 +87,10 @@ export class ExamplesListComponent {
         for (var i = 0; i < mainMenuLinks.length; i++) {
             this.links.push(mainMenuLinks[i]);
         }
+    }
+
+    ngAfterContentInit(){
+        track("ExamplesListComponent_ngAfterContentInit");
+        __stopCPUProfiler("ExamplesListComponent_ngAfterContentInit");
     }
 }

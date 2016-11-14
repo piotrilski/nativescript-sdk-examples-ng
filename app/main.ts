@@ -4,17 +4,20 @@
 
 let track = (name: string) => {
     let current = Date.now();
-    console.log("Duration of " + name + ": " + (current - start));
+    let elapsedTime = current - start;
+    if (elapsedTime > 100){
+        console.log(`>>> ${name}: ${elapsedTime} ms`);
+    }
     start = current;
 }
 
 let start = Date.now();
 
 import { platformNativeScriptDynamic, NativeScriptModule } from "nativescript-angular/platform";
-track("nativescript-angular/platform");
+track("import { platformNativeScriptDynamic, NativeScriptModule } from 'nativescript-angular/platform';");
 
 import { routes, routableComponents, examplePipes } from "./app.routes";
-track("./app.routes");
+track("import { routes, routableComponents, examplePipes } from './app.routes';");
 
 import { AppComponent } from "./app.component";
 track("AppComponent");
@@ -102,4 +105,4 @@ if (isIOS) {
 track("NgModule!");
 
 platformNativeScriptDynamic().bootstrapModule(AppComponentModule);
-track("AppComponentModule");
+track("platformNativeScriptDynamic().bootstrapModule(AppComponentModule);");

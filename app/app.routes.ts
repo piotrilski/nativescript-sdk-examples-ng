@@ -1,19 +1,22 @@
 let track = (name: string) => {
     let current = Date.now();
-    console.log("Duration of " + name + ": " + (current - start));
+    let elapsedTime = current - start;
+    if (elapsedTime > 100){
+        console.log(`>>> ${name}: ${elapsedTime} ms`);
+    }
     start = current;
 }
 
 let start = Date.now();
 
 import 'nativescript-angular/router';
-track("nativescript-angular/router");
+track("import 'nativescript-angular/router';");
 
 import { Component } from "@angular/core";
-track("nativescript-angular/router");
+track("import { Component } from '@angular/core';");
 
 import dialogs = require("ui/dialogs");
-track("nativescript-angular/router");
+track("import dialogs = require('ui/dialogs');");
 
 import { ExamplesListComponent } from "./examples-list.component";
 track("ExamplesListComponent");

@@ -1,0 +1,9 @@
+Samsung Galaxy S4, Android 5.0.1
+
+ExamplesListComponent.ngAfterContentInit: 19920 ms
+AppComponentConstructor: 18743 ms
+import { platformNativeScriptDynamic, NativeScriptModule } from 'nativescript-angular/platform';: 3181 ms
+import { routes, routableComponents, examplePipes } from "./app.routes";: 1929 ms
+import 'nativescript-angular/router';: 1277 ms
+platformNativeScriptDynamic().bootstrapModule(AppComponentModule);: 693 ms
+

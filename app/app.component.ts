@@ -1,8 +1,18 @@
+//declare var __startCPUProfiler;
+//declare var __stopCPUProfiler;
+//console.log(`>>> __startCPUProfiler("AppComponent");`);
+//__startCPUProfiler("AppComponent");
+
 import { Component } from "@angular/core";
+import { enableProdMode } from "@angular/core";
+enableProdMode();
 
 let track = (name: string) => {
     let current = Date.now();
-    console.log("Duration of " + name + ": " + (current - start));
+    let elapsedTime = current - start;
+    if (elapsedTime > 100){
+        console.log(`>>> ${name}: ${elapsedTime} ms`);
+    }
     start = current;
 }
 
@@ -15,6 +25,8 @@ let start = Date.now();
 
 export class AppComponent {
     constructor() {
-        track("ctor AppComponent");
+        track("AppComponentConstructor");
+        //console.log(`>>> __stopCPUProfiler("AppComponent");`);
+        //__stopCPUProfiler("AppComponent");
     }
 }
