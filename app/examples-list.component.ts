@@ -1,7 +1,7 @@
 declare var __startCPUProfiler;
 declare var __stopCPUProfiler;
 //console.log(`>>> __startCPUProfiler("AppComponent");`);
-__startCPUProfiler("ExamplesListComponent_ngAfterContentInit");
+//__startCPUProfiler("ExamplesListComponent_ngAfterContentInit");
 
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./link";
@@ -91,6 +91,8 @@ export class ExamplesListComponent {
 
     ngAfterContentInit(){
         track("ExamplesListComponent_ngAfterContentInit");
-        __stopCPUProfiler("ExamplesListComponent_ngAfterContentInit");
+        let now = Date.now();
+        console.log(`>>>>>>>>>>>>>>>>> TOTAL TIME (from main.ts first line to ExamplesListComponent.ngAfterContentInit): ${now - global.__startTime}ms`);
+        __stopCPUProfiler("ALL");
     }
 }

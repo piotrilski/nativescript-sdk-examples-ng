@@ -1,9 +1,30 @@
 Samsung Galaxy S4, Android 5.0.1
+--------------------------------
+JS: >>>>>>>>>>>>>>>>> TOTAL TIME (from main.ts first line to ExamplesListComponent.ngAfterContentInit): 22936ms
+JS: >>> ExamplesListComponent_ngAfterContentInit: 19943 ms
+JS: >>> AppComponentConstructor: 18805 ms
+JS: >>> import { platformNativeScriptDynamic, NativeScriptModule } from 'nativescript-angular/platform';: 2695 ms
+JS: >>> import { routes, routableComponents, examplePipes } from './app.routes';: 947 ms
+JS: >>> platformNativeScriptDynamic().bootstrapModule(AppComponentModule);: 603 ms
+JS: >>> import 'nativescript-angular/router';: 252 ms
 
-ExamplesListComponent.ngAfterContentInit: 19920 ms
-AppComponentConstructor: 18743 ms
-import { platformNativeScriptDynamic, NativeScriptModule } from 'nativescript-angular/platform';: 3181 ms
-import { routes, routableComponents, examplePipes } from "./app.routes";: 1929 ms
-import 'nativescript-angular/router';: 1277 ms
-platformNativeScriptDynamic().bootstrapModule(AppComponentModule);: 693 ms
+*** NOTE **** 
+The culprit is compiler.umd.js, line 17098, which is:
+var compile = function () { templates.forEach(function (template) { _this._compileTemplate(template); }); };
+
+----------------------------------------------------------------------------------------------------------------
+Commenting out all imports and route entries except for the ExamplesListComponent in app.routes.ts yielded the following results:
+
+JS: >>>>>>>>>>>>>>>>> TOTAL TIME (from main.ts first line to ExamplesListComponent.ngAfterContentInit): 9054ms
+JS: >>> ExamplesListComponent_ngAfterContentInit: 6017 ms
+JS: >>> AppComponentConstructor: 5484 ms
+JS: >>> import { platformNativeScriptDynamic, NativeScriptModule } from 'nativescript-angular/platform';: 2999 ms
+JS: >>> platformNativeScriptDynamic().bootstrapModule(AppComponentModule);: 603 ms
+JS: >>> NativeScriptRouterModule: 261 ms
+
+
+
+
+
+
 

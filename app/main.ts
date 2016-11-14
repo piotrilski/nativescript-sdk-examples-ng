@@ -2,6 +2,11 @@
 // >> ngmodule-config
 // >> (hide)
 
+declare var __startCPUProfiler;
+__startCPUProfiler("ALL");
+
+global.__startTime = Date.now();
+
 let track = (name: string) => {
     let current = Date.now();
     let elapsedTime = current - start;

@@ -9,6 +9,9 @@ let track = (name: string) => {
 
 let start = Date.now();
 
+import { ExamplesListComponent } from "./examples-list.component";
+track("ExamplesListComponent");
+
 import 'nativescript-angular/router';
 track("import 'nativescript-angular/router';");
 
@@ -17,9 +20,6 @@ track("import { Component } from '@angular/core';");
 
 import dialogs = require("ui/dialogs");
 track("import dialogs = require('ui/dialogs');");
-
-import { ExamplesListComponent } from "./examples-list.component";
-track("ExamplesListComponent");
 
 import { ActionBarExamplesComponent } from "./ui-category/action-bar/action-bar-examples.component";
 track("ActionBarExamplesComponent");
@@ -421,7 +421,6 @@ track("ModalPageExamplesComponent");
 import { SampleModalPageModuleExampleComponent } from "./modal-page/sample-modal-page-module-example/sample-modal-page-module-example";
 track("SampleModalPageModuleExampleComponent");
 
-
 import { ExtendedListViewExamplesComponent } from "./common-screens-category/listview/extended-listview-examples.component";
 track("ExtendedListViewExamplesComponent");
 
@@ -455,7 +454,6 @@ track("HorizontalScrollingExampleComponent");
 import { HeaderWithMapExampleComponent } from "./common-screens-category/listview/header-with-map/header-with-map.component";
 track("HeaderWithMapExampleComponent");
 
-
 import { ContentScreensExamplesComponent } from "./common-screens-category/content-screens/content-screens-examples.component";
 track("ContentScreensExamplesComponent");
 
@@ -464,7 +462,6 @@ track("ContentPageExampleComponent");
 
 import { ContentScrollablePageExampleComponent } from "./common-screens-category/content-screens/content-scrollable/content-scrollable-example.component";
 track("ContentScrollablePageExampleComponent");
-
 
 import { ExtendedDataEntryExamplesComponent } from "./common-screens-category/dataentry/extended-dataentry-examples.component";
 track("ExtendedDataEntryExamplesComponent");
@@ -490,7 +487,6 @@ track("UserSettingsMenuExampleComponent");
 import { UserFeedExampleComponent } from "./common-screens-category/userprofile/user-feed/user-feed.component";
 track("UserFeedExampleComponent");
 
-
 import { FlexboxLayoutComponentOne } from "./ui-category/layouts/flexbox-layout-one/flexbox-layout.component";
 track("FlexboxLayoutComponentOne");
 
@@ -500,13 +496,11 @@ track("FlexboxLayoutComponentTwo");
 import { FlexboxLayoutComponentThree } from "./ui-category/layouts/flexbox-layout-three/flexbox-layout.component";
 track("FlexboxLayoutComponentThree");
 
-
 import { CameraExamplesComponent } from "./camera/camera-examples.component";
 track("CameraExamplesComponent");
 
 import { UsingCameraExampleComponent } from "./camera/using-camera/using-camera.component";
 track("UsingCameraExampleComponent");
-
 
 track("all imports...");
 
@@ -683,12 +677,10 @@ export var routes = [
 
     routeEntry({ path: "cameraExamplesComponent", component: CameraExamplesComponent, data: { title: "Camera" } }),
     routeEntry({ path: "usingCameraExampleComponent", component: UsingCameraExampleComponent, data: { title: "Using camera" } }),
-
-    
 ];
 
 // One route:
-routes = [routes[0]];
+//routes = [routes[0]];
 
 function routeEntry(data) {
     routableComponents.push(data.component)

@@ -1,0 +1,37 @@
+iPhone 
+
+CONSOLE LOG file:///app/examples-list.component.js:79:20: >>>>>>>>>>>>>>>>> TOTAL TIME (from main.ts first line to ExamplesListComponent.ngAfterContentInit): 20880ms
+CONSOLE LOG file:///app/examples-list.component.js:11:20: >>> ExamplesListComponent_ngAfterContentInit: 18161 ms
+CONSOLE LOG file:///app/main.js:9:20: >>> import { routes, routableComponents, examplePipes } from './app.routes';: 3526 ms
+CONSOLE LOG file:///app/main.js:9:20: >>> import { platformNativeScriptDynamic, NativeScriptModule } from 'nativescript-angular/platform';: 2404 ms
+CONSOLE LOG file:///app/app.component.js:12:20: >>> AppComponentConstructor: 14466 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> import 'nativescript-angular/router';: 280 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> ValuesExampleComponent: 137 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> ColorExamplesComponent: 129 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> UsingConnectivityExampleComponent: 138 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> FetchGetExampleComponent: 121 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> SampleModalPageModuleExampleComponent: 144 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> MultiLineListViewExampleComponent: 137 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> CardsListViewExampleComponent: 133 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> HorizontalScrollingExampleComponent: 133 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> ContentPageExampleComponent: 130 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> WelcomeDataEntryExampleComponent: 142 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> UserFeedImagesExampleComponent: 133 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> UserFeedExampleComponent: 130 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> FlexboxLayoutComponentOne: 252 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> FlexboxLayoutComponentThree: 131 ms
+CONSOLE LOG file:///app/app.routes.js:5:20: >>> CameraExamplesComponent: 132 ms
+CONSOLE LOG file:///app/main.js:9:20: >>> AppComponent: 131 ms
+CONSOLE LOG file:///app/main.js:9:20: >>> TnsGoogleMaps: 127 ms
+
+The profiler showed that 8 seconds were spend in compiler.umd.js, line 17098, which is:
+var compile = function () { templates.forEach(function (template) { _this._compileTemplate(template); }); };
+
+----------------------------------------------------------------------------------------------------------------
+Commenting out all imports and route entries except for the ExamplesListComponent in app.routes.ts yielded the following results:
+
+>>>>>>>>>>>>>>>>> TOTAL TIME (from main.ts first line to ExamplesListComponent.ngAfterContentInit): 4472ms
+>>> import { platformNativeScriptDynamic, NativeScriptModule } from 'nativescript-angular/platform';: 2359 ms
+>>> ExamplesListComponent_ngAfterContentInit: 2096 ms
+>>> AppComponentConstructor: 1763 ms
+>>> NativeScriptRouterModule: 276 ms
