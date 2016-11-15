@@ -1,5 +1,3 @@
-declare var __stopCPUProfiler;
-
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 
 import { Link } from "./link";
@@ -74,10 +72,5 @@ export class ExamplesListComponent {
         for (var i = 0; i < mainMenuLinks.length; i++) {
             this.links.push(mainMenuLinks[i]);
         }
-    }
-
-    ngAfterContentInit() {
-        //global.__logTimes(`>>> ExamplesListComponent.ngAfterContentInit`);
-        //__stopCPUProfiler("Beginning_of_main.ts_to_ExamplesListComponent.ngAfterContentInit");
     }
 }
