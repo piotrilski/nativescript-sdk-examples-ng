@@ -25,7 +25,7 @@
       "version": "2016.6.2-7.3"
     },
     "tns-ios": {
-      "version": "2.4.0"
+      "version": "2.5.0-2016-11-3-2"
     }
   },
   "dependencies": {
@@ -37,17 +37,19 @@
     "@angular/platform-browser": "2.1.2",
     "@angular/platform-browser-dynamic": "2.1.2",
     "@angular/router": "3.1.2",
-    "nativescript-angular": "next",
+    "nativescript-angular": "^1.2.0-2016-11-14-1009",
     "nativescript-camera": "0.0.6",
     "nativescript-geolocation": "0.0.13",
     "nativescript-googlemaps": "0.0.6",
     "nativescript-intl": "~0.0.4",
     "nativescript-theme-core": "^0.1.2",
-    "rxjs": "5.0.0-beta.12",
     "reflect-metadata": "~0.1.8",
+    "rxjs": "5.0.0-beta.12",
     "tns-core-modules": "next"
   },
   "devDependencies": {
+    "@angular/compiler-cli": "^2.1.2",
+    "@ngtools/webpack": "^1.1.4",
     "awesome-typescript-loader": "~2.2.4",
     "babel-traverse": "6.11.4",
     "babel-types": "6.11.1",
@@ -61,12 +63,14 @@
     "nativescript-dev-typescript": "^0.3.2",
     "nativescript-dev-webpack": "^0.2.6",
     "opener": "^1.4.1",
+    "raw-loader": "^0.5.1",
     "rimraf": "^2.5.3",
     "tar.gz": "^1.0.5",
     "tns-platform-declarations": "2.2.0",
     "tslint": "^3.13.0",
     "typescript": "^2.0.3",
     "webpack": "~2.1.0-beta.25",
+    "webpack-bundle-analyzer": "^1.5.3",
     "webpack-sources": "~0.1.2",
     "zone.js": "~0.6.21"
   },
@@ -88,8 +92,8 @@
     "clean-ios": "tns clean-app ios",
     "prewebpack-android": "npm run clean-android",
     "prewebpack-ios": "npm run clean-ios",
-    "webpack-android": "npm run clean-android && webpack --config=webpack.android.js --progress",
-    "webpack-ios": "npm run clean-ios && webpack --config=webpack.ios.js --progress",
+    "webpack-android": "webpack --config=webpack.android.js --progress",
+    "webpack-ios": "webpack --config=webpack.ios.js --progress",
     "prestart-android-bundle": "npm run webpack-android",
     "prestart-ios-bundle": "npm run webpack-ios",
     "start-android-bundle": "tns run android --bundle --disable-npm-install",

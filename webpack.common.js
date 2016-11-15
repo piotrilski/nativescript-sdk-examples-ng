@@ -5,8 +5,11 @@ var path = require("path");
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 var fs = require("fs");
 var path = require("path");
+var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
-module.exports = function(platform, destinationApp) {
+var AotPlugin = require('@ngtools/webpack').AotPlugin;
+
+module.exports = function (platform, destinationApp) {
     if (!destinationApp) {
         destinationApp = nsWebpack.getAppPath(platform);
     }
@@ -23,6 +26,13 @@ module.exports = function(platform, destinationApp) {
             libraryTarget: "commonjs2",
             filename: "[name].js",
             jsonpFunction: "nativescriptJsonp"
+        },
+
+        resolveLoader: {
+            alias: {
+                "aot-fix": path.join(__dirname, "aot-fix.js"),
+                "raw": path.join(__dirname, "node_modules/raw-loader"),
+            }
         },
         resolve: {
             extensions: [
@@ -44,13 +54,25 @@ module.exports = function(platform, destinationApp) {
         },
         module: {
             loaders: [
+                // {
+                //     test: /\.html$/,
+                //     loader: "html"
+                // },
                 {
                     test: /\.html$/,
-                    loader: "html"
+                    loader: "raw"
                 },
                 {
+                    test: /\.css$/,
+                    loader: "raw"
+                },
+                // {
+                //     test: /\.ts$/,
+                //     loader: 'awesome-typescript-loader'
+                // },
+                {
                     test: /\.ts$/,
-                    loader: 'awesome-typescript-loader'
+                    loaders: ['@ngtools/webpack', 'aot-fix']
                 },
                 {
                     test: /\.scss$/,
@@ -71,14 +93,26 @@ module.exports = function(platform, destinationApp) {
             }),
             new CopyWebpackPlugin([
                 { from: "**/*.css" },
-                { from: "**/*.html" },
-                { from: "**/*.xml", ignore: "App_Resources/**" },
+                // { from: "**/*.html" },
+                // { from: "**/*.xml", ignore: "App_Resources/**" },
             ]),
             new nsWebpack.GenerateBundleStarterPlugin([
                 "./vendor",
                 "./bundle",
             ]),
             new nsWebpack.NativeScriptJsonpPlugin(),
+            new AotPlugin({
+                tsConfigPath: 'tsconfig-aot.json',
+                entryModule: 'app/app.module#AppModule',
+                typeChecking: false
+            }),
+            new BundleAnalyzerPlugin({
+                analyzerMode: "static",
+                openAnalyzer: false,
+                generateStatsFile: true,
+                reportFilename: path.join(__dirname, "report", platform + '-report.html'),
+                statsFilename: path.join(__dirname, "report", platform + '-stats.json'),
+            })
         ]
     };
 };

@@ -6,8 +6,8 @@ import {Page} from "ui/page";
 // >> passing-parameters
 @Component({
     selector: 'modal-view',
-    styleUrls:['./modal-page/sample-modal-page-module-example/modal-view.css'],
-    templateUrl:"./modal-page/sample-modal-page-module-example/modal-view.html",
+    styleUrls:['./modal-view.css'],
+    templateUrl:"./modal-view.html",
     
 })
 export class ModalViewComponent implements OnInit{
