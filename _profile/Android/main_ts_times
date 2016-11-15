@@ -1,0 +1,22 @@
+Aggregated total time of `require` is 4.51s
+--------------------------------------------
+
+JS: import { platformNativeScriptDynamic, NativeScriptModule } from "nativescript-angular/platform"; OWN: 2932 ms; TOTAL: 2932 ms;
+JS: import { routes, routableComponents, examplePipes } from "./app.routes"; OWN: 963 ms; TOTAL: 3895 ms;
+JS: import { AppComponent } from "./app.component"; OWN: 6 ms; TOTAL: 3901 ms;
+JS: import { NgModule } from "@angular/core"; OWN: 1 ms; TOTAL: 3902 ms;
+JS: import { NativeScriptRouterModule } from "nativescript-angular/router"; OWN: 0 ms; TOTAL: 3902 ms;
+JS: import { NativeScriptFormsModule } from "nativescript-angular/forms"; OWN: 3 ms; TOTAL: 3905 ms;
+JS: import {ModalDialogService} from "nativescript-angular/modal-dialog"; OWN: 1 ms; TOTAL: 3906 ms;
+JS: import { IfAndroidDirective, IfIosDirective } from "./ui-category/ng-directives/create-custom-directive/create-custom-directive.component" OWN: 0 ms; TOTAL: 3906 ms;
+JS: import { UnlessDirective } from "./ui-category/ng-directives/unless-directive/directive-unless" OWN: 4 ms; TOTAL: 3910 ms;
+JS: import { ToggleNavButtonDirective } from "./directives/toggle-nav-button.directive" OWN: 4 ms; TOTAL: 3914 ms;
+JS: import { ExampleTitleDirective } from "./directives/example.directive" OWN: 3 ms; TOTAL: 3917 ms;
+JS: import { ItemComponent } from "./ui-category/listview/using-item-template/using-item-template.component"; OWN: 1 ms; TOTAL: 3918 ms;
+JS: import {registerElement} from 'nativescript-angular/element-registry'; OWN: 1 ms; TOTAL: 3919 ms;
+JS: import { ModalViewComponent } from "./modal-page/sample-modal-page-module-example/modal-view"; OWN: 1 ms; TOTAL: 3920 ms;
+JS: import {TnsGoogleMaps} from "nativescript-googlemaps" OWN: 10 ms; TOTAL: 3930 ms;
+JS: import {isIOS} from "platform" OWN: 1 ms; TOTAL: 3931 ms;
+JS: class AppComponentModule { } OWN: 3 ms; TOTAL: 3934 ms;
+JS: registerElement("TnsGoogleMaps", () => TnsGoogleMaps); OWN: 1 ms; TOTAL: 3935 ms;
+JS: platformNativeScriptDynamic().bootstrapModule(AppComponentModule); OWN: 607 ms; TOTAL: 4542 ms;
