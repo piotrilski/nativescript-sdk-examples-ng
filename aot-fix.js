@@ -1,6 +1,5 @@
 function fixRelativeImports(fileName, source) {
-  console.log(" ----- Applying aot fix for: " + fileName)
-
+  // console.log(" ----- Applying aot fix for: " + fileName)
 
   var result = source;
   result = result.replace(/(\.\.\/)+platform\'/g, 'platform\'');

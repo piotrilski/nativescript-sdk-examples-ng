@@ -113,18 +113,18 @@ module.exports = function(platform, destinationApp) {
                 reportFilename: path.join(__dirname, "report", platform + '-report.html'),
                 statsFilename: path.join(__dirname, "report", platform + '-stats.json'),
             }),
-            // new webpack.optimize.UglifyJsPlugin({
-            //     mangle: false,
-            //     // compress: false,
-            //     // beautify: true,
-            //     compress: {
-            //         warnings: true
-            //     },
-            //     output: {
-            //         comments: false
-            //     },
-            //     sourceMap: false
-            // }),
+            new webpack.optimize.UglifyJsPlugin({
+                mangle: false,
+                // compress: false,
+                // beautify: true,
+                compress: {
+                    warnings: true
+                },
+                output: {
+                    comments: false
+                },
+                sourceMap: false
+            }),
         ]
     };
 };
