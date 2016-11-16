@@ -23,7 +23,7 @@ export class IfIosDirective {
 
 @Component({
     selector: 'create-custom-directive',
-    templateUrl: "ui-category/ng-directives/create-custom-directive/create-custom-directive.component.html",
+    templateUrl: './create-custom-directive.component.html',
 })
 
 export class CreateCustomDirectiveExampleComponent {

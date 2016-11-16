@@ -40,7 +40,7 @@ import { Page } from "ui/page";
 @Component({
     selector: 'button-component',
     directives: [COMMON_DIRECTIVES],
-    templateUrl: 'button/text/text.component.html'
+    templateUrl: './text.component.html'
 })
 
 export class ButtonTextComponent {

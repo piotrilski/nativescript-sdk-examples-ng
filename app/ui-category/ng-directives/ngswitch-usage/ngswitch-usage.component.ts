@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'ngswitch-component',
-    templateUrl: "ui-category/ng-directives/ngswitch-usage/ngswitch-usage.component.html",
+    templateUrl: './ngswitch-usage.component.html',
 })
 
 export class UsingNgSwitchExamplesComponent {

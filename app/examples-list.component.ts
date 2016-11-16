@@ -53,7 +53,7 @@ var mainMenuLinks = [
 
 @Component({
     selector: "menulistview",
-    templateUrl: 'examples-list.component.html',
+    templateUrl: './examples-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

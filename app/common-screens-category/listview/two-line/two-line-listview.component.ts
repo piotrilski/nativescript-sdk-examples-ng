@@ -5,7 +5,7 @@ import { mockedDataArray }  from "../mock-dataItems";
 // >> ext-listview-two-lines-code
 @Component({
     selector: "two-line-listview",
-    templateUrl: "common-screens-category/listview/two-line/two-line-listview.component.html",
+    templateUrl: './two-line-listview.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TwoLineListViewExampleComponent implements OnInit {

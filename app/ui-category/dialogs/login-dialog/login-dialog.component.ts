@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import dialogs = require("ui/dialogs");
+import * as dialogs from "ui/dialogs";
 
 @Component({
     selector: 'login-dialog-component',
-    templateUrl: 'ui-category/dialogs/login-dialog/login-dialog.component.html'
+    templateUrl: './login-dialog.component.html'
 })
 
 export class LoginDialogComponent {

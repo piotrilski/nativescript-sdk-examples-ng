@@ -7,7 +7,7 @@ var menuLinks = [
 
 @Component({
     selector: 'activity-indicator-examples-component',
-    templateUrl: 'examples-list.component.html',
+    templateUrl: '../../examples-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

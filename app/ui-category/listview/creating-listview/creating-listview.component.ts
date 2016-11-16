@@ -1,7 +1,7 @@
 // >> listview-create-code 
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 
-class Country {
+export class Country {
     constructor(public name: string) { }
 }
 
@@ -12,7 +12,7 @@ var europianCountries = ["Austria", "Belgium", "Bulgaria", "Croatia", "Cyprus", 
             
 @Component({
     selector: "creating-listview",
-    templateUrl: "ui-category/listview/creating-listview/creating-listview.component.html",
+    templateUrl: './creating-listview.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CreatingListViewComponent {

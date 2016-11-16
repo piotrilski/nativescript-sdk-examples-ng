@@ -18,7 +18,7 @@ export class HexPipe implements PipeTransform{
 
 @Component({
     selector: 'creating-colors-component',
-    templateUrl: 'color/creating-colors/creating-colors.component.html'
+    templateUrl: './creating-colors.component.html'
 })
 export class CreatingColorsExampleComponent {
     private redValue: number = 0;

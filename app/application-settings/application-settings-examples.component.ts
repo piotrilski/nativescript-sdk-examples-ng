@@ -7,7 +7,7 @@ var menuLinks = [
 
 @Component({
     selector: 'application-setting',
-    templateUrl: 'examples-list.component.html',
+    templateUrl: '../examples-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

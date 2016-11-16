@@ -3,7 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'ngif-component',
-    templateUrl: "ui-category/ng-directives/using-ngif/using-ngif.component.html",
+    templateUrl: './using-ngif.component.html',
 })
 
 export class UsingNgIfComponent {

@@ -4,7 +4,7 @@ import * as fs from "file-system";
 // << fs-delete-import-code
 @Component({
     selector: 'delete-file-component',
-    templateUrl: 'file-system/delete/delete.component.html'
+    templateUrl: './delete.component.html'
 })
 
 export class DeleteExampleComponent {

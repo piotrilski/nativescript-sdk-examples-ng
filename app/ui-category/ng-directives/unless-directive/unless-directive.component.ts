@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'unless-directive-component',
-    templateUrl: "ui-category/ng-directives/unless-directive/unless-directive.component.html",
+    templateUrl: './unless-directive.component.html',
 })
 export class UnlessDirectiveExampleComponent {
 

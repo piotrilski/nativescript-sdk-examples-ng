@@ -4,13 +4,13 @@ import { Component, ChangeDetectionStrategy } from "@angular/core";
 // >> (hide)
 import { ObservableArray } from "data/observable-array";
 // << (hide)
-class DataItem {
+export class DataItem {
     constructor(public name: string) { }
 }
 
 @Component({
     selector: 'clear-search-bar-component',
-    templateUrl: 'ui-category/search-bar/clear-search-bar/clear-search-bar.component.html',
+    templateUrl: './clear-search-bar.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

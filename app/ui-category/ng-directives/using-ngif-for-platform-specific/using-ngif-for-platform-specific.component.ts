@@ -1,10 +1,10 @@
 // >> using-ngif-platform-code 
 import { Component, OnInit } from "@angular/core";
-import application = require("application");
+import * as application from "application";
 
 @Component({
     selector: 'ngif-for-platform-specific-component',
-    templateUrl: "ui-category/ng-directives/using-ngif-for-platform-specific/using-ngif-for-platform-specific.component.html",
+    templateUrl: './using-ngif-for-platform-specific.component.html',
 })
 
 export class UsingNgIfForPlatformSpecificComponent implements OnInit {

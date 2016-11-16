@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import dialogs = require("ui/dialogs");
+import * as dialogs from "ui/dialogs";
 
 @Component({
     selector: 'alert-dialog-component',
-    templateUrl: 'ui-category/dialogs/alert-dialog/alert-dialog.component.html'
+    templateUrl: './alert-dialog.component.html'
 })
 
 export class AlertDialogComponent {

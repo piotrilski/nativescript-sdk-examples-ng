@@ -5,7 +5,7 @@ import { fruits } from "./fruits";
 // >> ngfor-bind-items-code 
 @Component({
     selector: 'ngfor-component',
-    templateUrl: "ui-category/ng-directives/ngfor-items/repeat-items.component.html",
+    templateUrl: './repeat-items.component.html',
 })
 
 export class NgForRepeatItemsComponent {

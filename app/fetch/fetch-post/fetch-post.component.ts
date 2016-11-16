@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'fetch-post-component',
-    templateUrl: 'fetch/fetch-post/fetch-post.component.html'
+    templateUrl: './fetch-post.component.html'
 })
 
 export class FetchPostExampleComponent {

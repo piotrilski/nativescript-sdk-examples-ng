@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { Page } from "ui/page";
 import { View } from "ui/core/view";
-import animationModule = require("ui/animation");
+import * as animationModule from "ui/animation";
 
 var view1: View;
 var view2: View;
@@ -10,8 +10,8 @@ var view4: View;
 
 @Component({
     selector: 'animations-component',
-    templateUrl: 'ui-category/animations/multiple-views/multiple-views.component.html',
-    styleUrls:["ui-category/animations/style.css"],
+    templateUrl: './multiple-views.component.html',
+    styleUrls: ["../style.css"],
 })
 
 export class MultipleViewsComponent implements OnInit {

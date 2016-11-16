@@ -5,7 +5,7 @@ import * as fs from "file-system";
 // << fs-read-import-code
 @Component({
     selector: 'read-file-component',
-    templateUrl: 'file-system/read/read.component.html'
+    templateUrl: './read.component.html'
 })
 
 export class ReadExampleComponent {
@@ -101,7 +101,7 @@ export class ReadExampleComponent {
     }
 }
 
-class FolderEntity {
+export class FolderEntity {
     private name: string;
     private path: string;
     private lastModified: string;

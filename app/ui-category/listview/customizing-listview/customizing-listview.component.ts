@@ -2,7 +2,7 @@
 import { Component, ChangeDetectionStrategy, ElementRef }  from "@angular/core";
 import { SetupItemViewArgs } from "nativescript-angular/directives";
 
-class Item {
+export class Item {
     constructor(public name: string) { }
 }
 
@@ -13,8 +13,8 @@ var items = ["ALL Heroes (header)", "Razor", "Rubick", "Phantom Lancer", "Legion
 
 @Component({
     selector: "customizing-listview",
-    styleUrls:["ui-category/listview/customizing-listview/customizing-listview.component.css"],
-    templateUrl: "ui-category/listview/customizing-listview/customizing-listview.component.html",
+    styleUrls:["./customizing-listview.component.css"],
+    templateUrl: './customizing-listview.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CustomizingListViewComponent {

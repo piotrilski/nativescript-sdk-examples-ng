@@ -7,7 +7,7 @@ var menuLinks = [
 
 @Component({
     selector: 'date-picker-component',
-    templateUrl: 'examples-list.component.html',
+    templateUrl: '../../examples-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

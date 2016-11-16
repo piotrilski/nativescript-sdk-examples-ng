@@ -8,9 +8,9 @@ import {setTimeout} from "timer"
 @Component({
     selector: 'basic-text-field-component',
     // >> (hide)
-    styleUrls: ["ui-category/text-field/text-field.style.css"],
+    styleUrls: ["../text-field.style.css"],
     // << (hide)
-    templateUrl: 'ui-category/text-field/basic-text-field/basic-text-field.component.html'
+    templateUrl: './basic-text-field.component.html'
 })
 
 export class BasicTextFieldComponent {

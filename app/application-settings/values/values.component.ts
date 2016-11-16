@@ -4,7 +4,7 @@ import * as appSettings from "application-settings";
 // << app-settings-code 
 @Component({
     selector: 'values-component',
-    templateUrl: 'application-settings/values/values.component.html'
+    templateUrl: './values.component.html'
 })
 export class ValuesExampleComponent {      
     public isTurnedOn: boolean;

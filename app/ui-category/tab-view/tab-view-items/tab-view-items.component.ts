@@ -5,7 +5,7 @@ import { Label } from "ui/label"
 
 @Component({
     selector: 'tab-view-items-component',
-    templateUrl: 'ui-category/tab-view/tab-view-items/tab-view-items.component.html',
+    templateUrl: './tab-view-items.component.html',
 })
 
 export class TabViewItemsComponent {

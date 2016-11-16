@@ -3,7 +3,7 @@ import { EventData } from "data/observable";
 
 @Component({
     selector: 'button-component',
-    templateUrl: 'ui-category/button/tap-event/tap-event.component.html'
+    templateUrl: './tap-event.component.html'
 })
 
 export class ButtonTapEventComponent { 

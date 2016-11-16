@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-import dialogs = require("ui/dialogs");
+import * as dialogs from "ui/dialogs";
 
 @Component({
     selector: 'prompt-dialog-component',
-    templateUrl: 'ui-category/dialogs/prompt-dialog/prompt-dialog.component.html'
+    templateUrl: './prompt-dialog.component.html'
 })
 
 export class PromptDialogComponent {

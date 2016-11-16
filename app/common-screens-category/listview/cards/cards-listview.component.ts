@@ -8,7 +8,7 @@ import {mockedDataArray} from "../mock-dataItems"
 // >> ext-listview-cards-code
 @Component({
     selector: "cards-listview",
-    templateUrl: "common-screens-category/listview/cards/cards-listview.component.html",
+    templateUrl: './cards-listview.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardsListViewExampleComponent implements OnInit {

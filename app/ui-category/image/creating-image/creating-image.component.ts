@@ -4,12 +4,12 @@ import { Image } from "ui/image";
 import { StackLayout } from "ui/layouts/stack-layout";
 import { Label } from "ui/label";
 
-import ImageSourceModule = require("image-source");
+import * as ImageSourceModule from "image-source";
 
 @Component({
     selector: "creating-image",
-    styleUrls: ["ui-category/image/creating-image/creating-image.component.css"],
-    templateUrl: "ui-category/image/creating-image/creating-image.component.html"
+    styleUrls: ["./creating-image.component.css"],
+    templateUrl: "./creating-image.component.html"
 })
 
 export class CreatingImageExampleComponent implements OnInit {

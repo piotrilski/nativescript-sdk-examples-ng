@@ -7,8 +7,8 @@ import {ModalViewComponent} from "./modal-view";
 @Component({
     providers:[ModalDialogService],
     selector: 'sample-modal-page-module-component',
-    styleUrls:['modal-page/sample-modal-page-module-example/sample-modal-page-module-example.css'],
-    templateUrl: 'modal-page/sample-modal-page-module-example/sample-modal-page-module-example.html'
+    styleUrls:['./sample-modal-page-module-example.css'],
+    templateUrl: './sample-modal-page-module-example.html'
 })
 
 export class SampleModalPageModuleExampleComponent {

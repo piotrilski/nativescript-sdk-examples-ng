@@ -10,7 +10,7 @@ import { Image } from "ui/image"
 
 @Component({
     selector: 'http-module-get-component',
-    templateUrl: 'httpModule/http-module-get/http-module-get.html'
+    templateUrl: './http-module-get.html'
 })
 
 export class HTTPModuleGetExampleComponent implements OnInit {

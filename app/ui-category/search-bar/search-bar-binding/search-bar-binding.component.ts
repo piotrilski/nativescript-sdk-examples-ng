@@ -5,7 +5,7 @@ import { isAndroid } from "platform"
 
 @Component({
     selector: 'search-bar-binding-component',
-    templateUrl: 'ui-category/search-bar/search-bar-binding/search-bar-binding.component.html'
+    templateUrl: './search-bar-binding.component.html'
 })
 
 export class SearchBarBindingComponent {

@@ -5,7 +5,7 @@ import { isUndefined } from "utils/types";
 // << trace-customtracewriter-imports
 
 // >> trace-create-custom-writer
-class TimestampConsoleWriter {
+export class TimestampConsoleWriter {
     public array = [];
     public write(message, category, type) {
         if (!console) {
@@ -33,8 +33,8 @@ class TimestampConsoleWriter {
 
 @Component({
     selector: 'custom-tracewriter-example-component',
-    templateUrl: 'trace/custom-tracewriter/custom-tracewriter-example.component.html',
-    styleUrls:["trace/custom-tracewriter/style.css"]
+    templateUrl: './custom-tracewriter-example.component.html',
+    styleUrls:["./style.css"]
 })
 
 export class CustomTraceWriterExampleComponent {

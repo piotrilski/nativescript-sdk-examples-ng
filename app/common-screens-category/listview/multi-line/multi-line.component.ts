@@ -6,7 +6,7 @@ import { mockedDataArray, Country }  from "../mock-dataItems";
 // >> multiline-listview-code
 @Component({
     selector: "multi-line-listview",
-    templateUrl: "common-screens-category/listview/multi-line/multi-line.component.html",
+    templateUrl: './multi-line.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MultiLineListViewExampleComponent implements OnInit {

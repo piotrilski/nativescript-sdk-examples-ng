@@ -4,7 +4,7 @@ import * as fs from "file-system";
 // << fs-create-import-code
 @Component({
     selector: 'create-file-component',
-    templateUrl: 'file-system/create/create.component.html'
+    templateUrl: './create.component.html'
 })
 
 export class CreateExampleComponent{

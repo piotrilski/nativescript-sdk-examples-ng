@@ -14,7 +14,7 @@ var menuLinks = [
 
 @Component({
     selector: 'layouts-component',
-    templateUrl: 'examples-list.component.html',
+    templateUrl: '../../examples-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
