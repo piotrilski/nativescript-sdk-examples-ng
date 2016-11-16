@@ -9,7 +9,7 @@ var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlug
 
 var AotPlugin = require('@ngtools/webpack').AotPlugin;
 
-module.exports = function (platform, destinationApp) {
+module.exports = function(platform, destinationApp) {
     if (!destinationApp) {
         destinationApp = nsWebpack.getAppPath(platform);
     }
@@ -104,7 +104,7 @@ module.exports = function (platform, destinationApp) {
             new AotPlugin({
                 tsConfigPath: 'tsconfig-aot.json',
                 entryModule: 'app/app.module#AppModule',
-                typeChecking: false
+                typeChecking: true
             }),
             new BundleAnalyzerPlugin({
                 analyzerMode: "static",
@@ -112,7 +112,19 @@ module.exports = function (platform, destinationApp) {
                 generateStatsFile: true,
                 reportFilename: path.join(__dirname, "report", platform + '-report.html'),
                 statsFilename: path.join(__dirname, "report", platform + '-stats.json'),
-            })
+            }),
+            // new webpack.optimize.UglifyJsPlugin({
+            //     mangle: false,
+            //     // compress: false,
+            //     // beautify: true,
+            //     compress: {
+            //         warnings: true
+            //     },
+            //     output: {
+            //         comments: false
+            //     },
+            //     sourceMap: false
+            // }),
         ]
     };
 };

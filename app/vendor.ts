@@ -1,8 +1,8 @@
 require("./vendor-platform");
 
 require('reflect-metadata');
-require('@angular/platform-browser');
-require('@angular/platform-browser-dynamic');
+// require('@angular/platform-browser');
+// require('@angular/platform-browser-dynamic');
 require('@angular/core');
 require('@angular/common');
 require('@angular/forms');

@@ -10,11 +10,8 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 // << (hide)
 import { ModalDialogService } from "nativescript-angular/modal-dialog";
 // >> (hide)
-// import { ToggleNavButtonDirective } from "./directives/toggle-nav-button.directive";
+import { ToggleNavButtonDirective } from "./directives/toggle-nav-button.directive";
 import { ExampleTitleDirective } from "./directives/example.directive";
-// import { IfAndroidDirective, IfIosDirective } from "./ui-category/ng-directives/create-custom-directive/create-custom-directive.component";
-// import { UnlessDirective } from "./ui-category/ng-directives/unless-directive/directive-unless";
-// import { ItemComponent } from "./ui-category/listview/using-item-template/using-item-template.component";
 // << (hide)
 import { registerElement } from 'nativescript-angular/element-registry';
 import { ModalViewComponent } from "./modal-page/sample-modal-page-module-example/modal-view";
@@ -24,12 +21,8 @@ import { isIOS } from "platform";
 @NgModule({
   declarations: [
     // >> (hide)
-    // ItemComponent,
     AppComponent,
-    // IfAndroidDirective,
-    // IfIosDirective,
-    // UnlessDirective,
-    // ToggleNavButtonDirective,
+    ToggleNavButtonDirective,
     ExampleTitleDirective,
     ...routableComponents,
     // << (hide)
@@ -47,7 +40,7 @@ import { isIOS } from "platform";
   // << (hide)
   providers: [ModalDialogService],
   schemas: [NO_ERRORS_SCHEMA],
-  entryComponents: [ModalViewComponent]
+  entryComponents: [AppComponent, ModalViewComponent]
 })
 // << ngmodule-config
 export class AppModule { }
