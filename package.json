@@ -45,7 +45,7 @@
     "nativescript-theme-core": "^0.1.2",
     "rxjs": "5.0.0-beta.12",
     "reflect-metadata": "~0.1.8",
-    "tns-core-modules": "next"
+    "tns-core-modules": "2.4.0"
   },
   "devDependencies": {
     "babel-traverse": "6.11.4",
@@ -77,6 +77,8 @@
     "prepush-to-github": "npm run build",
     "push-to-github": "(cd dist/sdk-examples && rimraf .git && git init && git add -A && git commit -m \"nativescript-sdk-examples build preview\" && git remote add origin git@github.com:NativeScript/nativescript-sdk-examples-preview.git && git push -u --force origin master)",
     "preshow-preview": "npm run push-to-github",
-    "show-preview": "opener https://github.com/NativeScript/nativescript-sdk-examples-preview"
+    "show-preview": "opener https://github.com/NativeScript/nativescript-sdk-examples-preview",
+    "android": "tns run android --release --key-store-path sdk-examples.keystore --key-store-password password --key-store-alias sdk-examples --key-store-alias-password password",
+    "ios": "tns run ios --release"
   }
 }
