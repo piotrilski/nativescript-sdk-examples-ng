@@ -48,20 +48,27 @@
     "tns-core-modules": "2.4.0"
   },
   "devDependencies": {
+    "angular2-template-loader": "~0.6.0",
+    "awesome-typescript-loader": "~2.2.4",
     "babel-traverse": "6.11.4",
     "babel-types": "6.11.1",
     "babylon": "6.8.4",
+    "copy-webpack-plugin": "~3.0.1",
     "fs-extra": "^0.30.0",
     "glob": "^7.0.5",
     "lazy": "1.0.11",
     "markdown-snippet-injector": "^0.2.0",
     "nativescript-dev-typescript": "^0.3.2",
+    "nativescript-dev-webpack": "^0.2.8",
     "opener": "^1.4.1",
+    "raw-loader": "~0.5.1",
     "rimraf": "^2.5.3",
     "tar.gz": "^1.0.5",
-    "tslint": "^3.13.0",
     "tns-platform-declarations": "2.2.0",
+    "tslint": "^3.13.0",
     "typescript": "^2.0.3",
+    "webpack": "~2.1.0-beta.25",
+    "webpack-sources": "~0.1.2",
     "zone.js": "~0.6.21"
   },
   "scripts": {
@@ -78,7 +85,21 @@
     "push-to-github": "(cd dist/sdk-examples && rimraf .git && git init && git add -A && git commit -m \"nativescript-sdk-examples build preview\" && git remote add origin git@github.com:NativeScript/nativescript-sdk-examples-preview.git && git push -u --force origin master)",
     "preshow-preview": "npm run push-to-github",
     "show-preview": "opener https://github.com/NativeScript/nativescript-sdk-examples-preview",
-    "android": "tns run android --release --key-store-path sdk-examples.keystore --key-store-password password --key-store-alias sdk-examples --key-store-alias-password password",
-    "ios": "tns run ios --release"
+    "android": "npm run start-android-bundle -- --release --key-store-path sdk-examples.keystore --key-store-password password --key-store-alias sdk-examples --key-store-alias-password password",
+    "ios": "npm run start-ios-bundle -- --release",
+    "clean-android": "tns clean-app android",
+    "clean-ios": "tns clean-app ios",
+    "prewebpack-android": "npm run clean-android",
+    "prewebpack-ios": "npm run clean-ios",
+    "webpack-android": "webpack --config=webpack.android.js --progress",
+    "webpack-ios": "webpack --config=webpack.ios.js --progress",
+    "prestart-android-bundle": "npm run webpack-android",
+    "prestart-ios-bundle": "npm run webpack-ios",
+    "start-android-bundle": "tns run android --bundle --disable-npm-install",
+    "start-ios-bundle": "tns run ios --bundle --disable-npm-install",
+    "prebuild-android-bundle": "npm run webpack-android",
+    "prebuild-ios-bundle": "npm run webpack-ios",
+    "build-android-bundle": "tns build android --bundle --disable-npm-install",
+    "build-ios-bundle": "tns build ios --bundle --disable-npm-install"
   }
 }
