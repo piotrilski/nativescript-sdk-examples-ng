@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'dock-layout-component',
-    templateUrl: 'ui-category/layouts/dock-layout/dock-layout.component.html',
-    styleUrls: ["ui-category/layouts/layouts.style.css"]
+    selector: "dock-layout-component",
+    moduleId: module.id,
+    templateUrl: "./dock-layout.component.html",
+    styleUrls: ["../layouts.style.css"]
 })
-
 export class DockLayoutComponent {
 }

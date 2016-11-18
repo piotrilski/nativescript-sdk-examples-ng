@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./../../link";
 
-var menuLinks = [
+let menuLinks = [
     new Link("Create ListView", "/list-view/creating-list-view"),
     new Link("Customize ListView", "/list-view/customizing-list-view"),
     new Link("Use item template", "/list-view/using-item-template"),
@@ -9,8 +9,9 @@ var menuLinks = [
 ];
 
 @Component({
-    selector: 'listview-component',
-    templateUrl: 'examples-list.component.html',
+    selector: "listview-component",
+    moduleId: module.id,
+    templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -20,7 +21,7 @@ export class ListViewExamplesComponent {
     constructor() {
         this.links = [];
 
-        for (var i = 0; i < menuLinks.length; i++) {
+        for (let i = 0; i < menuLinks.length; i++) {
             this.links.push(menuLinks[i]);
         }
     }

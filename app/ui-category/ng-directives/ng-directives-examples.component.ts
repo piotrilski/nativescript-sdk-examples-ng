@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./../../link";
 
-var menuLinks = [
+let menuLinks = [
     new Link("Create custom directive", "/angular-directives/create-custom-directive"),
     new Link("*ngFor repeater directive", "/angular-directives/ngfor-directive"),
     new Link("*ngSwitch structural directive", "/angular-directives/ngswitch-directive"),
@@ -11,8 +11,9 @@ var menuLinks = [
 ];
 
 @Component({
-    selector: 'ng-directives-examples-component',
-    templateUrl: 'examples-list.component.html',
+    selector: "ng-directives-examples-component",
+    moduleId: module.id,
+    templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgDirectivesExamplesComponent {
@@ -21,7 +22,7 @@ export class NgDirectivesExamplesComponent {
     constructor() {
         this.links = [];
 
-        for (var i = 0; i < menuLinks.length; i++) {
+        for (let i = 0; i < menuLinks.length; i++) {
             this.links.push(menuLinks[i]);
         }
     }

@@ -1,16 +1,17 @@
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./../../link";
 
-var menuLinks = [
+let menuLinks = [
     new Link("Basic Switch", "/switch/basic"),
     new Link("Disable Switch", "/switch/disable"),
     new Link("Styling Switch", "/switch/styling")
 ];
 
 @Component({
-    selector: 'switch-component',
-    templateUrl: 'examples-list.component.html',
-    styleUrls: ["ui-category/switch/switch.style.css"],
+    selector: "switch-component",
+    moduleId: module.id,
+    templateUrl: "../../examples-list.component.html",
+    styleUrls: ["./switch.style.css"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -20,7 +21,7 @@ export class SwitchExamplesComponent {
     constructor() {
         this.links = [];
 
-        for (var i = 0; i < menuLinks.length; i++) {
+        for (let i = 0; i < menuLinks.length; i++) {
             this.links.push(menuLinks[i]);
         }
     }

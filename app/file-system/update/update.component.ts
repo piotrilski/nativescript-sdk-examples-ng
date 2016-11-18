@@ -3,8 +3,9 @@ import { Component, OnInit } from "@angular/core";
 import * as fs from "file-system";
 // << fs-update-import-code
 @Component({
-    selector: 'update-file-component',
-    templateUrl: 'file-system/update/update.component.html'
+    selector: "update-file-component",
+    moduleId: module.id,
+    templateUrl: "./update.component.html"
 })
 
 export class UpdateExampleComponent implements OnInit {
@@ -37,7 +38,7 @@ export class UpdateExampleComponent implements OnInit {
             }).catch(err => {
                 // Error!
             });
-        // << fs-update-rename-file-code    
+        // << fs-update-rename-file-code
     }
 
     public onFolderRename() {
@@ -50,6 +51,6 @@ export class UpdateExampleComponent implements OnInit {
             }).catch(err => {
                 // Error!
             });
-        // << fs-update-rename-folder-code    
+        // << fs-update-rename-folder-code
     }
 }

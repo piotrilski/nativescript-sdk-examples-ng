@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { LocationExamplesComponent } from "./location-examples.component";
 import { BasicLocationExampleComponent } from "./basic-location-example/basic-location-example";
 import { LocationMonitoringExampleComponent } from "./location-monitoring-example/location-monitoring-example";
@@ -8,22 +8,23 @@ import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.modu
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: LocationExamplesComponent
     },
     {
-        path: 'location',
+        path: "location",
         component: BasicLocationExampleComponent,
         data: { title: "Location" }
     },
     {
-        path: 'location-monitoring',
+        path: "location-monitoring",
         component: LocationMonitoringExampleComponent,
         data: { title: "Location monitoring" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [LocationExamplesComponent, BasicLocationExampleComponent, LocationMonitoringExampleComponent]
 })

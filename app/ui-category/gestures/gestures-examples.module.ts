@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { GesturesExamplesComponent } from "./gestures-examples.component";
 import { DoubleTapExampleComponent } from "./double-tap/double-tap.component";
 import { LongPressExampleComponent } from "./long-press/long-press.component";
@@ -14,54 +14,55 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: GesturesExamplesComponent
     },
     {
-        path: 'double-tap',
+        path: "double-tap",
         component: DoubleTapExampleComponent,
         data: { title: "Double tap" }
     },
     {
-        path: 'long-press',
+        path: "long-press",
         component: LongPressExampleComponent,
         data: { title: "Long press" }
     },
     {
-        path: 'pan',
+        path: "pan",
         component: PanExampleComponent,
         data: { title: "Pan" }
     },
     {
-        path: 'pinch',
+        path: "pinch",
         component: PinchExampleComponent,
         data: { title: "Pinch" }
     },
     {
-        path: 'rotation',
+        path: "rotation",
         component: RotationExampleComponent,
         data: { title: "Rotation" }
     },
     {
-        path: 'swipe',
+        path: "swipe",
         component: SwipeExampleComponent,
         data: { title: "Swipe" }
     },
     {
-        path: 'tap',
+        path: "tap",
         component: TapExampleComponent,
         data: { title: "Tap" }
     },
     {
-        path: 'touch',
+        path: "touch",
         component: TouchExampleComponent,
         data: { title: "Touch" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
-    declarations: [GesturesExamplesComponent, DoubleTapExampleComponent, LongPressExampleComponent, PanExampleComponent, 
+    declarations: [GesturesExamplesComponent, DoubleTapExampleComponent, LongPressExampleComponent, PanExampleComponent,
     PinchExampleComponent, RotationExampleComponent, SwipeExampleComponent, TapExampleComponent, TouchExampleComponent]
 })
 

@@ -1,15 +1,16 @@
 import { Component } from "@angular/core";
-import dialogs = require("ui/dialogs");
+import * as dialogs from "ui/dialogs";
 
 @Component({
-    selector: 'confirm-dialog-component',
-    templateUrl: 'ui-category/dialogs/confirm-dialog/confirm-dialog.component.html'
+    selector: "confirm-dialog-component",
+    moduleId: module.id,
+    templateUrl: "./confirm-dialog.component.html"
 })
 
 export class ConfirmDialogComponent {
     displayConfirmDialog() {
         // >> confirm-dialog-code
-        var options = {
+        let options = {
             title: "Race selection",
             message: "Are you sure you want to be a Unicorn?",
             okButtonText: "Yes",

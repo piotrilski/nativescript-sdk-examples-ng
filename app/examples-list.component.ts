@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./link";
 
-var mainMenuLinks = [
+let mainMenuLinks = [
     new Link("ActionBar", "/action-bar"),
     new Link("ActivityIndicator", "/activity-indicator"),
     new Link("Angular directives", "/angular-directives"),
@@ -33,9 +33,6 @@ var mainMenuLinks = [
     new Link("Timer Module", "/timer"),
     new Link("Platform Module", "/platform"),
     new Link("Location", "/location"),
-    new Link("FPS Meter", "/fpsExamplesComponent"),
-    new Link("HTTP Module", "/httpModuleComponent"),
-    new Link("Location Module", "/locationExamplesComponent"),
     new Link("FPS Meter", "/fps-meter"),
     new Link("HTTP Module", "/http"),
     new Link("Application", "/application"),
@@ -45,17 +42,17 @@ var mainMenuLinks = [
     new Link("Fetch", "/fetch"),
     new Link("File System", "/file-system"),
     new Link("Modal page", "/modal-page"),
-
     new Link("ListView (extended examples)", "/extended-listview"),
     new Link("DataEntry (extended examples)", "/dataentry"),
     new Link("User Profile (extended examples)", "/userprofile"),
     new Link("Content Screens", "/content-screens"),
-    new Link("Camera", "/camera"),  
+    new Link("Camera", "/camera")
 ];
 
 @Component({
     selector: "menulistview",
-    templateUrl: 'examples-list.component.html',
+    moduleId: module.id,
+    templateUrl: "examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -66,12 +63,12 @@ export class ExamplesListComponent {
         this.links = [];
 
         mainMenuLinks.sort(function (a, b) {
-            var titleA = a.title.toUpperCase();
-            var titleB = b.title.toUpperCase();
+            let titleA = a.title.toUpperCase();
+            let titleB = b.title.toUpperCase();
             return (titleA < titleB) ? -1 : (titleA > titleB) ? 1 : 0;
         });
 
-        for (var i = 0; i < mainMenuLinks.length; i++) {
+        for (let i = 0; i < mainMenuLinks.length; i++) {
             this.links.push(mainMenuLinks[i]);
         }
     }

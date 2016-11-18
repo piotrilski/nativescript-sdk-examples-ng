@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { SearchBarExamplesComponent } from "./search-bar-examples.component";
 import { BasicSearchBarComponent } from "./basic-search-bar/basic-search-bar.component";
 import { ClearSearchBarComponent } from "./clear-search-bar/clear-search-bar.component";
@@ -9,31 +9,31 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: SearchBarExamplesComponent
     },
     {
-        path: 'basic',
+        path: "basic",
         component: BasicSearchBarComponent,
         data: { title: "Basic SearchBar" }
     },
     {
-        path: 'clear',
+        path: "clear",
         component: ClearSearchBarComponent,
         data: { title: "Clear SearchBar" }
     },
     {
-        path: 'binding',
+        path: "binding",
         component: SearchBarBindingComponent,
         data: { title: "SearchBar property binding" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [SearchBarExamplesComponent, BasicSearchBarComponent, ClearSearchBarComponent, SearchBarBindingComponent]
 })
-
 export class SearchBarExamplesModule {
     constructor() { }
 }

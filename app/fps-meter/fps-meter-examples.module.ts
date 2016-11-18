@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { FpsExamplesComponent } from "./fps-meter-examples.component";
@@ -10,16 +10,17 @@ import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.modu
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: FpsExamplesComponent
     },
     {
-        path: 'fps-meter-usage',
+        path: "fps-meter-usage",
         component: FpsMeterUsageComponent
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [FpsExamplesComponent, FpsMeterUsageComponent ]
 })

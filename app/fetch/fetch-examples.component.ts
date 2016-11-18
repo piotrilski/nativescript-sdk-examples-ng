@@ -1,14 +1,15 @@
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./../link";
 
-var menuLinks = [
+let menuLinks = [
     new Link("Fetch Get", "/fetch/fetch-get"),
     new Link("Fetch Post", "/fetch/fetch-post")
 ];
 
 @Component({
-    selector: 'connectivity-component',
-    templateUrl: 'examples-list.component.html',
+    selector: "connectivity-component",
+    moduleId: module.id,
+    templateUrl: "../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -18,7 +19,7 @@ export class FetchExamplesComponent {
     constructor() {
         this.links = [];
 
-        for (var i = 0; i < menuLinks.length; i++) {
+        for (let i = 0; i < menuLinks.length; i++) {
             this.links.push(menuLinks[i]);
         }
     }

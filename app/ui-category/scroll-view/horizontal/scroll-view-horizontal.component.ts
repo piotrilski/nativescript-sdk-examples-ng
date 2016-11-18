@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'scroll-view-horizontal-component',
-    templateUrl: 'ui-category/scroll-view/horizontal/scroll-view-horizontal.component.html'
+    selector: "scroll-view-horizontal-component",
+    moduleId: module.id,
+    templateUrl: "./scroll-view-horizontal.component.html"
 })
-
 export class ScrollViewHorizontalComponent {
 }

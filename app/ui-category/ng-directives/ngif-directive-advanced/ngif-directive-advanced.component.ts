@@ -1,10 +1,11 @@
-// >> using-ngif-platform-code 
+// >> using-ngif-platform-code
 import { Component, OnInit } from "@angular/core";
-import application = require("application");
+import * as application from "application";
 
 @Component({
-    selector: 'ngif-directive-advanced',
-    templateUrl: "ui-category/ng-directives/ngif-directive-advanced/ngif-directive-advanced.component.html",
+    selector: "ngif-directive-advanced",
+    moduleId: module.id,
+    templateUrl: "./ngif-directive-advanced.component.html",
 })
 
 export class NgIfAdvancedComponent implements OnInit {
@@ -21,4 +22,4 @@ export class NgIfAdvancedComponent implements OnInit {
         }
     }
 }
-// << using-ngif-platform-code        
+// << using-ngif-platform-code

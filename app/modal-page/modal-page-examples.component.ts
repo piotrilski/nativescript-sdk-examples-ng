@@ -1,13 +1,14 @@
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./../link";
 
-var menuLinks = [
+let menuLinks = [
     new Link("Modal page example", "/modal-page/sample-modal-page")
 ];
 
 @Component({
-    selector: 'modal-page-component',
-    templateUrl: 'examples-list.component.html',
+    selector: "modal-page-component",
+    moduleId: module.id,
+    templateUrl: "../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -16,9 +17,6 @@ export class ModalPageExamplesComponent {
 
     constructor() {
         this.links = [];
-
-        for (var i = 0; i < menuLinks.length; i++) {
-            this.links.push(menuLinks[i]);
-        }
+        menuLinks.forEach(link => this.links.push(link));
     }
 }

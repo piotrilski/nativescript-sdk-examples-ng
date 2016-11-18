@@ -2,14 +2,14 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'basic-switch-component',
-    templateUrl: 'ui-category/switch/basic-switch/basic-switch.component.html',
-    styleUrls: ["ui-category/switch/switch.style.css"],
+    selector: "basic-switch-component",
+    moduleId: module.id,
+    templateUrl: "./basic-switch.component.html",
+    styleUrls: ["../switch.style.css"],
 })
-
 export class BasicSwitchComponent {
-    public FirstSwitchValue = false;
-    public SecondSwitchValue = true;
+    public firstSwitchOn = false;
+    public secondSwitchOn = true;
 
     public firstSwitchState = "off";
     public secondSwitchState = "on";
@@ -17,8 +17,7 @@ export class BasicSwitchComponent {
     public FirstCheckChange(result) {
         if (result) {
             this.firstSwitchState = "on";
-        }
-        else {
+        } else {
             this.firstSwitchState = "off";
         }
     }
@@ -26,8 +25,7 @@ export class BasicSwitchComponent {
     public SecondCheckChange(result) {
         if (result) {
             this.secondSwitchState = "on";
-        }
-        else {
+        } else {
             this.secondSwitchState = "off";
         }
     }

@@ -1,6 +1,6 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
 
 import { TraceExamplesComponent } from "./trace-examples.component";
@@ -10,20 +10,21 @@ import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.modu
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: TraceExamplesComponent
     },
     {
-        path: 'custom-trace-writer',
+        path: "custom-trace-writer",
         component: CustomTraceWriterExampleComponent
     },
     {
-        path: 'trace-writer-categories',
+        path: "trace-writer-categories",
         component: TraceSpecificCategoriesExampleComponent
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [TraceExamplesComponent, CustomTraceWriterExampleComponent, TraceSpecificCategoriesExampleComponent]
 })

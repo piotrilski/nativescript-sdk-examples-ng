@@ -3,13 +3,13 @@ import * as imageSource from "image-source";
 // >> fs-read-import-code
 import * as fs from "file-system";
 // << fs-read-import-code
+
 @Component({
-    selector: 'read-file-component',
-    templateUrl: 'file-system/read/read.component.html'
+    selector: "read-file-component",
+    moduleId: module.id,
+    templateUrl: "./read.component.html"
 })
-
 export class ReadExampleComponent {
-
     public folderName: string;
     public fileName: string;
     public fileTextContent: string;
@@ -33,15 +33,15 @@ export class ReadExampleComponent {
         this.file = this.folder.getFile(this.fileName);
 
         this.file.writeText(this.fileTextContent)
-            .then(res => {
+            .then(() => {
                 // >> fs-read-text-code
                 this.file.readText()
                     .then(res => {
                         this.writtenContent = res;
                     }).catch(err => {
                         console.log(err.stack);
-                    })
-                // << fs-read-text-code    
+                    });
+                // << fs-read-text-code
             }).catch(err => {
                 console.log(err);
             });
@@ -92,7 +92,7 @@ export class ReadExampleComponent {
 
             // >> fs-write-sync-code
             this.imageFile.writeSync(this.binarySource, err => {
-                console.log(err)
+                console.log(err);
             });
             // << fs-write-sync-code
 

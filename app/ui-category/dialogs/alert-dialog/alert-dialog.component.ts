@@ -1,15 +1,16 @@
 import { Component } from "@angular/core";
-import dialogs = require("ui/dialogs");
+import * as dialogs from "ui/dialogs";
 
 @Component({
-    selector: 'alert-dialog-component',
-    templateUrl: 'ui-category/dialogs/alert-dialog/alert-dialog.component.html'
+    selector: "alert-dialog-component",
+    moduleId: module.id,
+    templateUrl: "./alert-dialog.component.html"
 })
 
 export class AlertDialogComponent {
      displayAlertDialog() {
         // >> alert-dialog-code
-        var options = {
+        let options = {
             title: "Race selection",
             message: "Race chosen: Unicorn",
             okButtonText: "OK"

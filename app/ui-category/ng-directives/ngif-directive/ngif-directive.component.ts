@@ -1,11 +1,11 @@
-// >> using-ngif-code 
+// >> using-ngif-code
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'ngif-directive',
-    templateUrl: "ui-category/ng-directives/ngif-directive/ngif-directive.component.html",
+    selector: "ngif-directive",
+    moduleId: module.id,
+    templateUrl: "./ngif-directive.component.html",
 })
-
 export class NgIfComponent {
     public isVisible: boolean = true;
 
@@ -17,4 +17,4 @@ export class NgIfComponent {
         }
     }
 }
-// << using-ngif-code        
+// << using-ngif-code
