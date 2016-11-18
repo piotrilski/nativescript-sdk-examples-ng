@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptModule } from "nativescript-angular/platform";
 import { SwitchExamplesComponent } from "./switch-examples.component";
@@ -9,27 +9,28 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: SwitchExamplesComponent
     },
     {
-        path: 'basic',
+        path: "basic",
         component: BasicSwitchComponent,
         data: { title: "Basic Switch" }
     },
     {
-        path: 'disable',
+        path: "disable",
         component: DisableSwitchComponent,
         data: { title: "Disable Switch component" }
     },
     {
-        path: 'styling',
+        path: "styling",
         component: StylingSwitchComponent,
         data: { title: "Styling Switch component" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [SwitchExamplesComponent, BasicSwitchComponent, DisableSwitchComponent, StylingSwitchComponent]
 })

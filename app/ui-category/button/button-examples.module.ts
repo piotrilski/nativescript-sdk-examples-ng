@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptModule } from "nativescript-angular/platform";
 import { ButtonExamplesComponent } from "./button-examples.component";
@@ -10,27 +10,28 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: ButtonExamplesComponent
     },
     {
-        path: 'binding-text',
+        path: "binding-text",
         component: ButtonBindingTextComponent,
         data: { title: "Binding text" }
     },
     {
-        path: 'tap-event',
+        path: "tap-event",
         component: ButtonTapEventComponent,
         data: { title: "Tap event" }
     },
     {
-        path: 'text',
+        path: "text",
         component: ButtonTextComponent,
         data: { title: "Text" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [ButtonExamplesComponent, ButtonBindingTextComponent, ButtonTapEventComponent, ButtonTextComponent]
 })

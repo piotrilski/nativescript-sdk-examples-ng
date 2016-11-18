@@ -11,7 +11,7 @@ var menuLinks = [
 
 @Component({
     selector: 'dialog-component',
-    templateUrl: 'examples-list.component.html',
+    templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

@@ -17,8 +17,8 @@ export class HexPipe implements PipeTransform{
 }
 
 @Component({
-    selector: 'creating-colors-component',
-    templateUrl: 'color/creating-colors/creating-colors.component.html'
+    selector: "creating-colors-component",
+    templateUrl: "./creating-colors.component.html"
 })
 export class CreatingColorsExampleComponent {
     private redValue: number = 0;
@@ -26,7 +26,7 @@ export class CreatingColorsExampleComponent {
     private blueValue: number = 0;
 
     public changeColor(value: string) {
-        if (value[0] !== '#') {
+        if (value[0] !== "#") {
             value = "#" + value;
         }
         var isValidHexColor = /(^#[0-9A-F]{6}$)|(^#[0-9A-F]{3}$)/i.test(value);
@@ -42,7 +42,7 @@ export class CreatingColorsExampleComponent {
     }
 
     convertHex(hex) {
-        hex = hex.replace('#', '');
+        hex = hex.replace("#", "");
 
         if (hex.length !== 6) {
             hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];

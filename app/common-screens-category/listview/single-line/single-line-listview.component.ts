@@ -5,7 +5,7 @@ import { mockedDataArray, Country }  from "../mock-dataItems";
 // >> ext-listview-basic-code
 @Component({
     selector: "single-line-listview",
-    templateUrl: "common-screens-category/listview/single-line/single-line-listview.component.html",
+    templateUrl: "./single-line-listview.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SingleLineListViewExampleComponent implements OnInit {
@@ -27,6 +27,6 @@ export class SingleLineListViewExampleComponent implements OnInit {
 
     onItemTapThirdList(args: ItemEventData) {
         console.log(args.index);
-    }   
+    }
 }
 // << ext-listview-basic-code

@@ -6,8 +6,8 @@ var menuLinks = [
 ];
 
 @Component({
-    selector: 'camera-component',
-    templateUrl: 'examples-list.component.html',
+    selector: "camera-component",
+    templateUrl: "../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

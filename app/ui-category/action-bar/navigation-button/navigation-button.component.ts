@@ -3,12 +3,12 @@ import { RouterExtensions } from 'nativescript-angular/router';
 
 @Component({
     selector: 'navigation-button-component',
-    templateUrl: 'ui-category/action-bar/navigation-button/navigation-button.component.html'
+    templateUrl: './navigation-button.component.html'
 })
 
 export class NavigationButtonComponent {
     // >> navigation-button-back-code
-    constructor(private routerExtensions: RouterExtensions) {               
+    constructor(private routerExtensions: RouterExtensions) {
     }
 
     public goBack() {

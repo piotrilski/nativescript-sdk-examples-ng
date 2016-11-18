@@ -6,7 +6,7 @@ import { mockedGroupDataArray, Country, GroupTitle, GroupFooter }  from "../mock
 // >> grouped-single-listview-basic-code
 @Component({
     selector: "grouped-single-line-listview",
-    templateUrl: "common-screens-category/listview/single-line-grouped/grouped-single-line.component.html",
+    templateUrl: "./grouped-single-line.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class GroupedSingleLineListViewExampleComponent implements OnInit {
@@ -34,6 +34,6 @@ export class GroupedSingleLineListViewExampleComponent implements OnInit {
 
     onItemTapThirdList(args: ItemEventData) {
         console.log(args.index);
-    }   
+    }
 }
 // << grouped-single-listview-basic-code

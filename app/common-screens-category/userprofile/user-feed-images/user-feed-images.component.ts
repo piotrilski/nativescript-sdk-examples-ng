@@ -1,11 +1,11 @@
 import { Component, ChangeDetectionStrategy, OnInit, Input}  from "@angular/core";
 import {ObservableArray} from "data/observable-array";
-import {mockedDataArray} from "../mock-dataItems" 
+import {mockedDataArray} from "../mock-dataItems";
 
 // >> ext-listview-cards-code
 @Component({
     selector: "user-feed-images",
-    templateUrl: "common-screens-category/userprofile/user-feed-images/user-feed-images.component.html",
+    templateUrl: "./user-feed-images.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserFeedImagesExampleComponent  {

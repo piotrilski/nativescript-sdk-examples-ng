@@ -4,11 +4,11 @@ import * as fs from "file-system";
 // << fs-delete-import-code
 @Component({
     selector: 'delete-file-component',
-    templateUrl: 'file-system/delete/delete.component.html'
+    templateUrl: './delete.component.html'
 })
 
 export class DeleteExampleComponent {
-    
+
     public documents: fs.Folder;
     public file: fs.File;
     public myFolder: fs.Folder;
@@ -31,7 +31,7 @@ export class DeleteExampleComponent {
                 }).catch(err => {
                     console.log(err.stack);
                 });
-            // << fs-delete-file-code    
+            // << fs-delete-file-code
         } else {
             this.resultMessage = "Already deleted file!";
         }
@@ -48,7 +48,7 @@ export class DeleteExampleComponent {
                 }).catch(err => {
                     console.log(err.stack);
                 });
-            // << fs-delete-folder-code    
+            // << fs-delete-folder-code
         } else {
             this.resultMessage = "Already deleted folder!";
         }
@@ -64,7 +64,7 @@ export class DeleteExampleComponent {
                 }).catch(err => {
                     console.log(err.stack);
                 });
-            // << fs-clear-folder-code    
+            // << fs-clear-folder-code
         } else {
             this.resultMessage = "Cannot clear already deleted folder";
         }

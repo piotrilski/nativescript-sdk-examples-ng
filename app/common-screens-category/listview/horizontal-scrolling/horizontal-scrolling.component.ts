@@ -6,7 +6,7 @@ import { ScrollView, ScrollEventData } from "ui/scroll-view";
 // >> ext-horizontal-lists-code
 @Component({
     selector: "horizontal-scrolling-lists-listview",
-    templateUrl: "common-screens-category/listview/horizontal-scrolling/horizontal-scrolling.component.html",
+    templateUrl: "./horizontal-scrolling.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HorizontalScrollingExampleComponent implements OnInit {
@@ -15,7 +15,7 @@ export class HorizontalScrollingExampleComponent implements OnInit {
     ngOnInit() {
         for (var index = 0; index < mockedDataArray.length; index++) {
             // creating an object with additional id key to re-use as unique id
-            this.countries.push({ "data" : mockedDataArray[index], id: index});      
+            this.countries.push({ "data" : mockedDataArray[index], id: index});
         }
     }
 

@@ -3,8 +3,8 @@ import {ObservableArray} from "data/observable-array";
 
 @Component({
     selector: "dataentry-signup",
-    templateUrl: "common-screens-category/dataentry/dataentry-signup/dataentry-signup.component.html",
-    styleUrls:["common-screens-category/dataentry/dataentry-signup/style.css"],
+    templateUrl: "./dataentry-signup.component.html",
+    styleUrls: ["./style.css"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SignupDataEntryExampleComponent  {

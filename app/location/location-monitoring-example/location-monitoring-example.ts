@@ -6,8 +6,8 @@ import { SegmentedBarItem } from "ui/segmented-bar";
 
 @Component({
     selector: 'location-monitoring-example',
-    styleUrls: ['location/location-monitoring-example/style.css'],
-    templateUrl: 'location/location-monitoring-example/location-monitoring-example.html'
+    styleUrls: ['./style.css'],
+    templateUrl: './location-monitoring-example.html'
 })
 
 export class LocationMonitoringExampleComponent {

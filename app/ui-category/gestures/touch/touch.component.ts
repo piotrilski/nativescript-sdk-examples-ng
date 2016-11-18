@@ -4,11 +4,11 @@ import { TouchGestureEventData } from "ui/gestures";
 
 @Component({
     selector: "touch-gesture",
-    templateUrl: "ui-category/gestures/touch/touch.component.html"
+    templateUrl: "./touch.component.html"
 })
 
 export class TouchExampleComponent {
-	public coordX: number = 0;
+    public coordX: number = 0;
     public coordY: number = 0;
 
     onTouch(args: TouchGestureEventData) {

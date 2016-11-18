@@ -11,7 +11,7 @@ var menuLinks = [
 
 @Component({
     selector: 'file-system-component',
-    templateUrl: 'examples-list.component.html',
+    templateUrl: '../examples-list.component.html',
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

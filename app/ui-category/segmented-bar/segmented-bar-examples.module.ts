@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptModule } from "nativescript-angular/platform";
 import { SegmentedBarExamplesComponent } from "./segmented-bar-examples.component";
@@ -8,22 +8,23 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: SegmentedBarExamplesComponent
     },
     {
-        path: 'basic',
+        path: "basic",
         component: BasicSegmentedBarComponent,
         data: { title: "Basic SegmentedBar" }
     },
     {
-        path: 'views',
+        path: "views",
         component: SegmentedBarViewsComponent,
         data: { title: "SegmentedBar views" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [SegmentedBarExamplesComponent, BasicSegmentedBarComponent, SegmentedBarViewsComponent]
 })

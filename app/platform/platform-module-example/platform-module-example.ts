@@ -28,8 +28,8 @@ class ScreenInfo{
 
 @Component({
     selector: 'platform-module-component',
-    styleUrls:['platform/platform-module-example/style.css'],
-    templateUrl: 'platform/platform-module-example/platform-module-example.html'
+    styleUrls:['./style.css'],
+    templateUrl: './platform-module-example.html'
 })
 
 export class PlatformModuleExampleComponent {

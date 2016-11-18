@@ -5,7 +5,7 @@ import { mockedGroupDataArray }  from "../mock-dataItems";
 // >> multi-line-grouped-code
 @Component({
     selector: "multi-line-grouped-listview",
-    templateUrl: "common-screens-category/listview/multi-line-grouped/multi-line-grouped.component.html",
+    templateUrl: "./multi-line-grouped.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MultiLineGroupedListViewExampleComponent implements OnInit {
@@ -33,6 +33,6 @@ export class MultiLineGroupedListViewExampleComponent implements OnInit {
 
     onItemTapThirdList(args: ItemEventData) {
         console.log(args.index);
-    }   
+    }
 }
 // << multi-line-grouped-code

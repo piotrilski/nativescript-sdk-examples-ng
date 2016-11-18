@@ -1,4 +1,4 @@
-// >> creating-listpicker-code 
+// >> creating-listpicker-code
 import { Component }  from "@angular/core";
 
 var pokemonList = ["Bulbasaur", "Parasect", "Venonat", "Venomoth", "Diglett",
@@ -6,7 +6,7 @@ var pokemonList = ["Bulbasaur", "Parasect", "Venonat", "Venomoth", "Diglett",
 
 @Component({
     selector: "creating-listpicker",
-    templateUrl: "ui-category/listpicker/creating-listpicker/creating-listpicker.component.html"
+    templateUrl: "./creating-listpicker.component.html"
 })
 export class CreatingListPickerComponent {
 
@@ -21,7 +21,7 @@ export class CreatingListPickerComponent {
     }
 
     public selectedIndexChanged(picker) {
-        console.log('picker selection: ' + picker.selectedIndex);
+        console.log("picker selection: " + picker.selectedIndex);
     }
 }
-// << creating-listpicker-code  
+// << creating-listpicker-code

@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptModule } from "nativescript-angular/platform";
 import { FileSystemExamplesComponent } from "./file-system-examples.component";
@@ -11,37 +11,38 @@ import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.modu
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: FileSystemExamplesComponent
     },
     {
-        path: 'create',
+        path: "create",
         component: CreateExampleComponent,
         data: { title: "Create" }
     },
     {
-        path: 'delete',
+        path: "delete",
         component: DeleteExampleComponent,
         data: { title: "Delete" }
     },
     {
-        path: 'paths',
+        path: "paths",
         component: PathsExampleComponent,
         data: { title: "Paths" }
     },
     {
-        path: 'read',
+        path: "read",
         component: ReadExampleComponent,
         data: { title: "Read" }
     },
     {
-        path: 'update',
+        path: "update",
         component: UpdateExampleComponent,
         data: { title: "Update" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [FileSystemExamplesComponent, CreateExampleComponent, DeleteExampleComponent,PathsExampleComponent,ReadExampleComponent,UpdateExampleComponent]
 })

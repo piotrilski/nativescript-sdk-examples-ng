@@ -5,10 +5,10 @@ import {DatePicker} from "ui/date-picker";
 import {ModalViewComponent} from "./modal-view";
 
 @Component({
-    providers:[ModalDialogService],
-    selector: 'sample-modal-page-module-component',
-    styleUrls:['modal-page/sample-modal-page-module-example/sample-modal-page-module-example.css'],
-    templateUrl: 'modal-page/sample-modal-page-module-example/sample-modal-page-module-example.html'
+    providers: [ModalDialogService],
+    selector: "sample-modal-page-module-component",
+    styleUrls: ["./sample-modal-page-module-example.css"],
+    templateUrl: "./sample-modal-page-module-example.html"
 })
 
 export class SampleModalPageModuleExampleComponent {
@@ -41,13 +41,13 @@ export class SampleModalPageModuleExampleComponent {
             .then((dateresult: Date) => {
                 console.log("date result "+dateresult);
                 // >> (hide)
-                if(args =='start'){
+                if(args =="start"){
                     this.startDate = dateresult;
                 }
-                if(args == 'end'){
+                if(args == "end"){
                     this.endDate = dateresult;
                 }
-                if(args == 'findTheDay'){
+                if(args == "findTheDay"){
                     this.date = dateresult;
                     this.weekday = this.weekdays[this.date.getDay()];
                 }

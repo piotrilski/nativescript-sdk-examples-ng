@@ -2,10 +2,10 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'button-component',
-    templateUrl: 'ui-category/button/binding-text/binding-text.component.html'
+    templateUrl: './binding-text.component.html'
 })
 
-export class ButtonBindingTextComponent {      
+export class ButtonBindingTextComponent {
    public content : string;
 
    constructor() {

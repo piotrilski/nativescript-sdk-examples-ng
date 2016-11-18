@@ -3,13 +3,13 @@ import {ObservableArray} from "data/observable-array";
 // >> dataentry-wellcome-login-code
 @Component({
     selector: "dataentry-welcome-listview",
-    templateUrl: "common-screens-category/dataentry/dataentry-welcome/dataentry-welcome.component.html",
-    styleUrls:["common-screens-category/dataentry/dataentry-welcome/style.css"],
+    templateUrl: "./dataentry-welcome.component.html",
+    styleUrls: ["./style.css"],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class WelcomeDataEntryExampleComponent  {
     public secureproperty = false;
-    
+
     public show(){
         this.secureproperty = !this.secureproperty;
     }

@@ -4,11 +4,11 @@ import { Component } from "@angular/core";
 import * as application from "application";
 
 @Component({
-    selector: 'app-check-target-component',
-    templateUrl: 'application/app-checking-target/app-checking-target.component.html'
+    selector: "app-check-target-component",
+    templateUrl: "./app-checking-target.component.html"
 })
 
-export class AppCheckingTargetExampleComponent {      
+export class AppCheckingTargetExampleComponent {
     public isItemVisible: boolean;
 
     constructor() {
@@ -22,4 +22,4 @@ export class AppCheckingTargetExampleComponent {
     }
 
 }
-// << app-check-target-code 
+// << app-check-target-code

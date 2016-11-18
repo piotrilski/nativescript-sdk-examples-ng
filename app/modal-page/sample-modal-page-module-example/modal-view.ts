@@ -1,14 +1,13 @@
-import {Component, OnInit, NgModule} from "@angular/core";
-import {ModalDialogParams} from "nativescript-angular/modal-dialog";
-import {DatePicker} from "ui/date-picker";
-import {Page} from "ui/page";
+import { Component, OnInit } from "@angular/core";
+import { ModalDialogParams } from "nativescript-angular/modal-dialog";
+import { DatePicker } from "ui/date-picker";
+import { Page } from "ui/page";
 
 // >> passing-parameters
 @Component({
     selector: 'modal-view',
-    styleUrls:['./modal-page/sample-modal-page-module-example/modal-view.css'],
-    templateUrl:"./modal-page/sample-modal-page-module-example/modal-view.html",
-    
+    styleUrls: ['./modal-view.css'],
+    templateUrl: "./modal-view.html"
 })
 export class ModalViewComponent implements OnInit{
     public currentdate:Date;

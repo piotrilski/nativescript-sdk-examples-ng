@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptModule } from "nativescript-angular/platform";
 import { FetchExamplesComponent } from "./fetch-examples.component";
@@ -8,22 +8,23 @@ import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.modu
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: FetchExamplesComponent
     },
     {
-        path: 'fetch-get',
+        path: "fetch-get",
         component: FetchGetExampleComponent,
         data: { title: "Fetch get" }
     },
     {
-        path: 'fetch-post',
+        path: "fetch-post",
         component: FetchPostExampleComponent,
         data: { title: "Fetch post" }
     }
 ];
 
 @NgModule({
+    schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [FetchExamplesComponent, FetchGetExampleComponent, FetchPostExampleComponent]
 })

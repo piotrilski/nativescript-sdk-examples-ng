@@ -1,4 +1,4 @@
-// >> using-item-template-code 
+// >> using-item-template-code
 import { Component, ChangeDetectionStrategy, Input }  from "@angular/core";
 
 @Component({
@@ -16,7 +16,7 @@ export class ItemComponent {
 
 @Component({
     selector: 'using-item-template',
-    templateUrl: "ui-category/listview/using-item-template/using-item-template.component.html",
+    templateUrl: "./using-item-template.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UsingItemTemplateComponent {
@@ -29,4 +29,4 @@ export class UsingItemTemplateComponent {
         this.manufacturers = [{ "list": bugatti }, { "list": mclaren }, { "list": jaguar }];
     }
 }
-// << using-item-template-code 
+// << using-item-template-code

@@ -4,13 +4,13 @@ import * as connectivity from "connectivity";
 // << connectivity-import-code
 @Component({
     selector: 'using-connectivity-component',
-    templateUrl: 'connectivity/using-connectivity/using-connectivity.component.html'
+    templateUrl: './using-connectivity.component.html'
 })
 
 export class UsingConnectivityExampleComponent implements OnInit, OnDestroy {
     public connectionType: string;
 
-    constructor(private zone: NgZone) { 
+    constructor(private zone: NgZone) {
         // >> connectivity-gettype-code
         var connectionType = connectivity.getConnectionType();
         switch (connectionType) {

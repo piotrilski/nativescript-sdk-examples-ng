@@ -3,12 +3,12 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'text-field-binding-component',
-    templateUrl: 'ui-category/text-field/text-field-binding/text-field-binding.component.html',    
-    styleUrls: ["ui-category/text-field/text-field.style.css"]
+    styleUrls: ["../text-field.style.css"],
+    templateUrl: './text-field-binding.component.html'
 })
 
 export class TextFieldBindingComponent {
-    
+
   public showAlert(result){
       alert("Text: "+result);
   }
@@ -16,6 +16,6 @@ export class TextFieldBindingComponent {
   submit(result){
       alert("Text: "+result);
   }
-  
+
 }
 // << textfield-binding-show-result

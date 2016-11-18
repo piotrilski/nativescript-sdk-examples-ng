@@ -7,8 +7,8 @@ var menuLinks = [
 ];
 
 @Component({
-    selector: 'listpicker-component',
-    templateUrl: 'examples-list.component.html',
+    selector: "listpicker-component",
+    templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

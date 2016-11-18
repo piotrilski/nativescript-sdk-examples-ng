@@ -2,14 +2,14 @@ import { Component, ChangeDetectionStrategy, OnInit, Input}  from "@angular/core
 import { ObservableArray } from "data/observable-array";
 import { mockedDataArray }  from "../mock-dataItems";
 import { Location } from "nativescript-geolocation";
-import { TnsGoogleMaps } from "nativescript-googlemaps"
-import app = require("application");
-import {isAndroid} from "platform"
+import { TnsGoogleMaps } from "nativescript-googlemaps";
+import * as app from "application";
+import {isAndroid} from "platform";
 // >> ext-listview-map-header-code
 declare var com:any;
 @Component({
     selector: "header-with-map-listview",
-    templateUrl: "common-screens-category/listview/header-with-map/header-with-map.component.html",
+    templateUrl: "./header-with-map.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HeaderWithMapExampleComponent {
@@ -40,11 +40,11 @@ export class HeaderWithMapExampleComponent {
         {latitude:38.8994614,longitude:-77.0846061}];
         if(isAndroid){
             var context = app.android.context;
-            var api = com.google.android.gms.common.GoogleApiAvailability.getInstance()
+            var api = com.google.android.gms.common.GoogleApiAvailability.getInstance();
             console.log(api.isGooglePlayServicesAvailable(context));
             if(api.isGooglePlayServicesAvailable(context) === 1){
                 this.isServiceAvailable=false;
-                alert("Google maps will not run without Google Play services, which are missing from your Emulator/Device.")
+                alert("Google maps will not run without Google Play services, which are missing from your Emulator/Device.");
             }
         }
     }

@@ -15,7 +15,7 @@ export class Country {
 }
 
 export class GroupFooter{
-    constructor(public description: string) { }   
+    constructor(public description: string) { }
 }
 
 export var mockedDataArray = [

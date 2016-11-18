@@ -4,9 +4,9 @@ import {Component} from "@angular/core";
 @Component({
     selector: 'web-view-html-component',
     // >> (hide)
-    styleUrls: ["ui-category/web-view/style.css"],
+    styleUrls: ["../style.css"],
     // << (hide)
-    templateUrl: 'ui-category/web-view/web-view-html/web-view-html.component.html',
+    templateUrl: './web-view-html.component.html',
 })
 
 export class WebViewHtmlComponent {

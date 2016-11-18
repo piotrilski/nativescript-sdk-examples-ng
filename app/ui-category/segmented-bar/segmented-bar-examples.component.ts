@@ -8,7 +8,7 @@ var menuLinks = [
 
 @Component({
     selector: 'segmented-bar-component',
-    templateUrl: 'examples-list.component.html',
+    templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

@@ -5,7 +5,7 @@ import * as fs from "file-system";
 // << fs-read-import-code
 @Component({
     selector: 'read-file-component',
-    templateUrl: 'file-system/read/read.component.html'
+    templateUrl: './read.component.html'
 })
 
 export class ReadExampleComponent {

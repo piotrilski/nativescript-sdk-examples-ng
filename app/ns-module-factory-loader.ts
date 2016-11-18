@@ -34,7 +34,7 @@ export class NsModuleFactoryLoader implements NgModuleFactoryLoader {
             throw new Error(`Cannot find "${exportName}" in "${modulePath}"`);
         }
 
-        return this.offlineMode ? loadedModule : this.compiler.compileModuleAsync(loadedModule);
+        return this.offlineMode ? Promise.resolve(loadedModule) : this.compiler.compileModuleAsync(loadedModule);
     }
 }
 

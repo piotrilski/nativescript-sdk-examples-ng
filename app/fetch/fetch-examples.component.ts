@@ -7,8 +7,8 @@ var menuLinks = [
 ];
 
 @Component({
-    selector: 'connectivity-component',
-    templateUrl: 'examples-list.component.html',
+    selector: "connectivity-component",
+    templateUrl: "../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 

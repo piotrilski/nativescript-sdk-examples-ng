@@ -6,7 +6,7 @@ import { mockedDataArray, mockedGroupDataArray, Country }  from "../mock-dataIte
 
 @Component({
     selector: "multi-line-big-listview",
-    templateUrl: "common-screens-category/listview/multi-line-big/multi-line-big.component.html",
+    templateUrl: "./multi-line-big.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MultiLineBigListViewExampleComponent implements OnInit {
@@ -34,13 +34,13 @@ export class MultiLineBigListViewExampleComponent implements OnInit {
 
     onItemTapThirdList(args: ItemEventData) {
         console.log(args.index);
-    }  
+    }
 
     onSetupItemView(args: SetupItemViewArgs) {
         // further customisation can be achived with SetupItemViewArgs
         // example for creating a variable for each third element
         args.view.context.third = (args.index % 3 === 0);
-    }  
+    }
 
     checkType(value) {
         // get the class name e.g. GroupTitle or Country

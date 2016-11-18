@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, OnInit, Input}  from "@angular/core";
 import {ObservableArray} from "data/observable-array";
-import {mockedDataArray} from "../mock-dataItems" 
+import {mockedDataArray} from "../mock-dataItems"
 
 
 
@@ -8,7 +8,7 @@ import {mockedDataArray} from "../mock-dataItems"
 // >> ext-listview-cards-code
 @Component({
     selector: "cards-listview",
-    templateUrl: "common-screens-category/listview/cards/cards-listview.component.html",
+    templateUrl: "./cards-listview.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardsListViewExampleComponent implements OnInit {
@@ -30,6 +30,6 @@ export class CardsListViewExampleComponent implements OnInit {
 
     onItemTapThirdList(args) {
         console.log(args.index);
-    }   
+    }
 }
 // << ext-listview-cards-code

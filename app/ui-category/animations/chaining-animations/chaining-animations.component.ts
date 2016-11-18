@@ -3,7 +3,7 @@ import { View } from "ui/core/view";
 
 @Component({
     selector: 'animations-component',
-    templateUrl: 'ui-category/animations/chaining-animations/chaining-animations.component.html'
+    templateUrl: './chaining-animations.component.html'
 })
 
 export class ChainingAnimationsComponent {

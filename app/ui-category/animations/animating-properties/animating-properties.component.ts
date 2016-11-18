@@ -3,11 +3,11 @@ import { Color } from "color";
 import { Label } from "ui/label";
 import { AbsoluteLayout } from "ui/layouts/absolute-layout";
 
-var enums = require("ui/enums");
+import * as enums from "ui/enums";
 
 @Component({
-    selector: 'animations-component',
-    templateUrl: 'ui-category/animations/animating-properties/animating-properties.component.html'
+    selector: "animations-component",
+    templateUrl: "./animating-properties.component.html"
 })
 
 export class AnimatingPropertiesComponent {
