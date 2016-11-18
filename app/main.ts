@@ -2,12 +2,14 @@
 // >> ngmodule-config
 // >> (hide)
 import { platformNativeScriptDynamic, NativeScriptModule } from "nativescript-angular/platform";
-import { routes } from "./app.routes";
-import { AppComponent } from "./app.component";
-import { NgModule } from "@angular/core";
+import { NgModule, NgModuleFactoryLoader } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
+
+import { routes } from "./app.routes";
+import { AppComponent } from "./app.component";
 // << (hide)
+import { NsModuleFactoryLoader } from "./ns-module-factory-loader";
 import { ModalDialogService } from "nativescript-angular/modal-dialog";
 import { registerElement } from 'nativescript-angular/element-registry';
 import { ModalViewComponent } from "./modal-page/sample-modal-page-module-example/modal-view";
@@ -28,7 +30,10 @@ import { isIOS } from "platform"
         NativeScriptRouterModule,
         NativeScriptRouterModule.forRoot(routes),
     ],
-    providers: [ModalDialogService],
+    providers: [
+        ModalDialogService,
+        { provide: NgModuleFactoryLoader, useClass: NsModuleFactoryLoader }
+    ],
     entryComponents: [ModalViewComponent]
 })
 // << ngmodule-config
