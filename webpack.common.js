@@ -99,6 +99,18 @@ module.exports = function(platform, destinationApp) {
             ]),
             //Required for bundle chunks loading
             new nsWebpack.NativeScriptJsonpPlugin(),
+            new webpack.optimize.UglifyJsPlugin({
+                mangle: false,
+                // compress: false,
+                // beautify: true,
+                compress: {
+                    warnings: true
+                },
+                output: {
+                    comments: false
+                },
+                sourceMap: false
+            })
         ]
     };
 };
