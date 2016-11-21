@@ -1,6 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
-import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { FetchExamplesComponent } from "./fetch-examples.component";
 import { FetchGetExampleComponent } from "./fetch-get/fetch-get.component";
 import { FetchPostExampleComponent } from "./fetch-post/fetch-post.component";
