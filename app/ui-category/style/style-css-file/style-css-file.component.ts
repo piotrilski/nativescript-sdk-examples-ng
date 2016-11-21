@@ -1,12 +1,11 @@
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'style-css-file-component',
-    templateUrl: './style-css-file.component.html',
-    styleUrls:['./style.css']
+    selector: "style-css-file-component",
+    templateUrl: "./style-css-file.component.html",
+    styleUrls: ["./style.css"]
 })
-
-export class StyleCSSFileComponent{
+export class StyleCSSFileComponent {
     public counter: number = 16;
 
     public get message(): string {
@@ -16,7 +15,7 @@ export class StyleCSSFileComponent{
             return "Hoorraaay! \nYou are ready to start building!";
         }
     }
-    
+
     public onTap() {
         this.counter--;
     }

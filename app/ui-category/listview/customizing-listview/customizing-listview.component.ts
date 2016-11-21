@@ -6,14 +6,14 @@ class Item {
     constructor(public name: string) { }
 }
 
-var items = ["ALL Heroes (header)", "Razor", "Rubick", "Phantom Lancer", "Legion Commander", "Brewmaster", "Outworld Devourer",
-"Sniper", "Lina", "Sven", "Visage","Undying", "Tiny", "Tidehunter", "Puck", "Ursa",
-"Magnus", "Earthshaker", "Windrunner", "Techies", "Crystal Maiden","Batrider", "Riki", "Invoker", "Venomancer",
-"Timbersaw","Wraithking", "Anti Mage", "Ancient Apparition", "Troll Warlord", "Lich", "Enchantress", "Bristleback", "Pudge", "(footer)"];
+let items = ["ALL Heroes (header)", "Razor", "Rubick", "Phantom Lancer", "Legion Commander", "Brewmaster", "Outworld Devourer",
+"Sniper", "Lina", "Sven", "Visage", "Undying", "Tiny", "Tidehunter", "Puck", "Ursa",
+"Magnus", "Earthshaker", "Windrunner", "Techies", "Crystal Maiden", "Batrider", "Riki", "Invoker", "Venomancer",
+"Timbersaw", "Wraithking", "Anti Mage", "Ancient Apparition", "Troll Warlord", "Lich", "Enchantress", "Bristleback", "Pudge", "(footer)"];
 
 @Component({
     selector: "customizing-listview",
-    styleUrls:["./customizing-listview.component.css"],
+    styleUrls: ["./customizing-listview.component.css"],
     templateUrl: "./customizing-listview.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
@@ -23,7 +23,7 @@ export class CustomizingListViewComponent {
     constructor(public elementRef: ElementRef) {
         this.dataItems = [];
 
-        for (var i = 0; i < items.length; i++) {
+        for (let i = 0; i < items.length; i++) {
             this.dataItems.push(new Item(items[i]));
         }
     }

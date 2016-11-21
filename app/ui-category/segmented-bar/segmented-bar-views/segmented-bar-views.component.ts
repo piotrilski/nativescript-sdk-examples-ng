@@ -3,14 +3,12 @@ import { Component } from "@angular/core";
 import { SegmentedBarItem } from "ui/segmented-bar";
 
 @Component({
-    selector: 'segmented-bar-views-component',
-    styleUrls: ['./style.css'],
-    templateUrl: './segmented-bar-views.component.html'
+    selector: "segmented-bar-views-component",
+    styleUrls: ["./style.css"],
+    templateUrl: "./segmented-bar-views.component.html"
 })
-
 export class SegmentedBarViewsComponent {
-
-    public Items: Array<SegmentedBarItem>;
+    public items: Array<SegmentedBarItem>;
     public selectedIndex = 0;
     public visibility1 = true;
     public visibility2 = false;
@@ -19,11 +17,11 @@ export class SegmentedBarViewsComponent {
     public state = 0;
     // << (hide)
     constructor() {
-        this.Items = [];
-        for (var i = 1; i < 4; i++) {
-            var tmpSegmentedBar: SegmentedBarItem = <SegmentedBarItem>new SegmentedBarItem();
+        this.items = [];
+        for (let i = 1; i < 4; i++) {
+            let tmpSegmentedBar: SegmentedBarItem = <SegmentedBarItem>new SegmentedBarItem();
             tmpSegmentedBar.title = "View " + i;
-            this.Items.push(tmpSegmentedBar);
+            this.items.push(tmpSegmentedBar);
         }
         this.selectedIndex = 0;
     }
@@ -36,23 +34,19 @@ export class SegmentedBarViewsComponent {
                 this.visibility2 = false;
                 this.visibility3 = false;
                 break;
-
             case 1:
                 this.visibility1 = false;
                 this.visibility2 = true;
                 this.visibility3 = false;
                 break;
-
             case 2:
                 this.visibility1 = false;
                 this.visibility2 = false;
                 this.visibility3 = true;
                 break;
-
             default:
                 break;
         }
     }
-
 }
 // << segmentedbar-items-setting-visibility

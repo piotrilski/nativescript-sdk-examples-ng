@@ -9,11 +9,10 @@ class DataItem {
 }
 
 @Component({
-    selector: 'clear-search-bar-component',
-    templateUrl: './clear-search-bar.component.html',
+    selector: "clear-search-bar-component",
+    templateUrl: "./clear-search-bar.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-
 export class ClearSearchBarComponent {
     private arrayItems: Array<DataItem>;
     public myItems: ObservableArray<DataItem>;
@@ -37,9 +36,9 @@ export class ClearSearchBarComponent {
 
     public onSubmit(value) {
         this.myItems = new ObservableArray<DataItem>();
-        var searchValue = value.toLowerCase();
+        let searchValue = value.toLowerCase();
         if (value !== "") {
-            for (var i = 0; i < this.arrayItems.length; i++) {
+            for (let i = 0; i < this.arrayItems.length; i++) {
                 if (this.arrayItems[i].name.toLowerCase().indexOf(searchValue) !== -1) {
                     this.myItems.push(this.arrayItems[i]);
                 }
@@ -50,7 +49,7 @@ export class ClearSearchBarComponent {
     public onClear() {
         this.searchPhrase = "";
         this.myItems = new ObservableArray<DataItem>();
-        
+
         this.arrayItems.forEach(item => {
             this.myItems.push(item);
         });

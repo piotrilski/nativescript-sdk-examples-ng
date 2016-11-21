@@ -1,8 +1,8 @@
-// >> using-ngswitch-code 
+// >> using-ngswitch-code
 import { Component } from "@angular/core";
 
 @Component({
-    selector: 'ngswitch-directive',
+    selector: "ngswitch-directive",
     templateUrl: "./ngswitch-directive.component.html",
 })
 
@@ -21,4 +21,4 @@ export class NgSwitchComponent {
         this.color = "yellow";
     }
 }
-// << using-ngswitch-code        
+// << using-ngswitch-code

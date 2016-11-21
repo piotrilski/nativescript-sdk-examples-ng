@@ -10,15 +10,15 @@ import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.modu
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: TraceExamplesComponent
     },
     {
-        path: 'custom-trace-writer',
+        path: "custom-trace-writer",
         component: CustomTraceWriterExampleComponent
     },
     {
-        path: 'trace-writer-categories',
+        path: "trace-writer-categories",
         component: TraceSpecificCategoriesExampleComponent
     }
 ];

@@ -7,11 +7,11 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: FormattedStringExamplesComponent
     },
     {
-        path: 'create-formatted-string',
+        path: "create-formatted-string",
         component: CreateFormattedStringComponent,
         data: { title: "Create Formatted String" }
     }

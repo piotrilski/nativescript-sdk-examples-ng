@@ -5,28 +5,28 @@ import { Page } from "ui/page";
 
 // >> passing-parameters
 @Component({
-    selector: 'modal-view',
-    styleUrls: ['./modal-view.css'],
+    selector: "modal-view",
+    styleUrls: ["./modal-view.css"],
     templateUrl: "./modal-view.html"
 })
-export class ModalViewComponent implements OnInit{
-    public currentdate:Date;
+export class ModalViewComponent implements OnInit {
+    public currentdate: Date;
 
     constructor(private params: ModalDialogParams, private page: Page) {
-        this.currentdate= new Date(params.context);
+        this.currentdate = new Date(params.context);
     }
 
-    ngOnInit(){
-        let datePicker:DatePicker =<DatePicker> this.page.getViewById<DatePicker>("datePicker");
+    ngOnInit() {
+        let datePicker: DatePicker = <DatePicker> this.page.getViewById<DatePicker>("datePicker");
         datePicker.year = this.currentdate.getFullYear();
-        datePicker.month = this.currentdate.getMonth()+1;
+        datePicker.month = this.currentdate.getMonth() + 1;
         datePicker.day = this.currentdate.getDate();
         datePicker.minDate = new Date(1975, 0, 29);
         datePicker.maxDate = new Date(2045, 4, 12);
     }
 
     public submit() {
-            let datePicker:DatePicker =<DatePicker> this.page.getViewById<DatePicker>("datePicker");
+            let datePicker: DatePicker = <DatePicker> this.page.getViewById<DatePicker>("datePicker");
             this.params.closeCallback(datePicker.date);
     }
 }

@@ -11,7 +11,8 @@ class TimestampConsoleWriter {
         if (!console) {
             return;
         }
-        var msgType = isUndefined(type) ? messageType.log : type;
+
+        let msgType = isUndefined(type) ? messageType.log : type;
 
         switch (msgType) {
             case messageType.log:
@@ -26,17 +27,18 @@ class TimestampConsoleWriter {
             case messageType.error:
                 this.array.push({ "messageType": "error", "date": new Date().toISOString(), "message": message, "category": category });
                 break;
+            default:
+                break;
         }
     }
 }
 // << trace-create-custom-writer
 
 @Component({
-    selector: 'custom-tracewriter-example-component',
+    selector: "custom-tracewriter-example-component",
     styleUrls: ["./style.css"],
-    templateUrl: './custom-tracewriter-example.component.html',
+    templateUrl: "./custom-tracewriter-example.component.html",
 })
-
 export class CustomTraceWriterExampleComponent {
     public customwriter: TimestampConsoleWriter;
 

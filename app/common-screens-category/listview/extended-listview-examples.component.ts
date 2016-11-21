@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy }  from "@angular/core";
 import { Link } from "./../../link";
 
-var menuLinks = [
+let menuLinks = [
     new Link("Single line items", "/extended-listview/single-line-listview"),
     new Link("Grouped single line items", "/extended-listview/grouped-single-line"),
     new Link("Two line items", "/extended-listview/two-line-listview"),
@@ -15,8 +15,8 @@ var menuLinks = [
 ];
 
 @Component({
-    selector: 'extended-listview-component',
-    templateUrl: '../../examples-list.component.html',
+    selector: "extended-listview-component",
+    templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 
@@ -26,7 +26,7 @@ export class ExtendedListViewExamplesComponent {
     constructor() {
         this.links = [];
 
-        for (var i = 0; i < menuLinks.length; i++) {
+        for (let i = 0; i < menuLinks.length; i++) {
             this.links.push(menuLinks[i]);
         }
     }

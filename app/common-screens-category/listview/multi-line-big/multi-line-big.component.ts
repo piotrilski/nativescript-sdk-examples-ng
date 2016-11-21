@@ -1,5 +1,5 @@
 // >> multi-line-big-code
-import { Component, ChangeDetectionStrategy, OnInit, Input}  from "@angular/core";
+import { Component, ChangeDetectionStrategy, OnInit }  from "@angular/core";
 import { ItemEventData } from "ui/list-view";
 import { SetupItemViewArgs } from "nativescript-angular/directives";
 import { mockedDataArray, mockedGroupDataArray, Country }  from "../mock-dataItems";
@@ -15,13 +15,8 @@ export class MultiLineBigListViewExampleComponent implements OnInit {
     public groupedCountries: Array<any> = [];
 
     ngOnInit() {
-        for (var i = 0; i < mockedDataArray.length; i++) {
-            this.countries.push(mockedDataArray[i]);
-        }
-
-        for (var i = 0; i < mockedGroupDataArray.length; i++) {
-            this.groupedCountries.push(mockedGroupDataArray[i]);
-        }
+        mockedDataArray.forEach(item => this.countries.push(item));
+        mockedGroupDataArray.forEach(item => this.groupedCountries.push(item));
     }
 
     onItemTapFirstList(args: ItemEventData) {
@@ -44,7 +39,7 @@ export class MultiLineBigListViewExampleComponent implements OnInit {
 
     checkType(value) {
         // get the class name e.g. GroupTitle or Country
-        var className = value.constructor.name;
+        let className = value.constructor.name;
         return className;
     }
 }

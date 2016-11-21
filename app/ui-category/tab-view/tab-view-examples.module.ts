@@ -8,16 +8,16 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: TabViewExamplesComponent
     },
     {
-        path: 'basic',
+        path: "basic",
         component: BasicTabViewComponent,
         data: { title: "Basic TabView" }
     },
     {
-        path: 'items',
+        path: "items",
         component: TabViewItemsComponent,
         data: { title: "TabView items" }
     }
@@ -28,7 +28,6 @@ export const routerConfig = [
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [TabViewExamplesComponent, BasicTabViewComponent, TabViewItemsComponent]
 })
-
 export class TabViewExamplesModule {
     constructor() { }
 }

@@ -3,10 +3,9 @@ import { Button } from "ui/button";
 import { Page } from "ui/page";
 
 @Component({
-    selector: 'button-component',
-    templateUrl: './text.component.html'
+    selector: "button-component",
+    templateUrl: "./text.component.html"
 })
-
 export class ButtonTextComponent implements OnInit {
     constructor(private page: Page) {
     }

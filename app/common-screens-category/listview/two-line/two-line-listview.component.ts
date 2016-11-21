@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit, Input}  from "@angular/core";
+import { Component, ChangeDetectionStrategy, OnInit }  from "@angular/core";
 import { ObservableArray } from "data/observable-array";
 import { mockedDataArray }  from "../mock-dataItems";
 
@@ -9,13 +9,13 @@ import { mockedDataArray }  from "../mock-dataItems";
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TwoLineListViewExampleComponent implements OnInit {
-    public countries:ObservableArray<any>;
+    public countries: ObservableArray<any>;
 
-    constructor(){
-        this.countries = new ObservableArray(mockedDataArray)
+    constructor() {
+        this.countries = new ObservableArray(mockedDataArray);
     }
 
-    ngOnInit(){}
+    ngOnInit() {}
 
     onItemTapFirstList(args) {
         console.log(args.index);

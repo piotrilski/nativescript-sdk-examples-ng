@@ -2,10 +2,9 @@ import { Component } from "@angular/core";
 import { View } from "ui/core/view";
 
 @Component({
-    selector: 'animations-component',
-    templateUrl: './chaining-animations.component.html'
+    selector: "animations-component",
+    templateUrl: "./chaining-animations.component.html"
 })
-
 export class ChainingAnimationsComponent {
 
     // >> chaining-animations-code

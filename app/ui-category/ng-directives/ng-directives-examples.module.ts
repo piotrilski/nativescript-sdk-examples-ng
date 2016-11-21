@@ -14,36 +14,36 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: NgDirectivesExamplesComponent
     },
     {
-        path: 'create-custom-directive',
+        path: "create-custom-directive",
         component: CreateCustomDirectiveExampleComponent,
         data: { title: "Create custom directive" }
     },
     {
-        path: 'ngfor-directive',
+        path: "ngfor-directive",
         component: NgForComponent,
         data: { title: "*ngFor directive" }
     },
     {
-        path: 'ngswitch-directive',
+        path: "ngswitch-directive",
         component: NgSwitchComponent,
         data: { title: "*ngSwitch directive" }
     },
     {
-        path: 'custom-unless-directive',
+        path: "custom-unless-directive",
         component: CustomUnlessComponent,
         data: { title: "Custom *unless directive" }
     },
     {
-        path: 'ngif-directive',
+        path: "ngif-directive",
         component: NgIfComponent,
         data: { title: "*ngIf directive" }
     },
     {
-        path: 'ngif-directive-advanced',
+        path: "ngif-directive-advanced",
         component: NgIfAdvancedComponent,
         data: { title: "*ngIf directive (platform specific)" }
     }
@@ -54,7 +54,6 @@ export const routerConfig = [
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptFormsModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [NgDirectivesExamplesComponent, CreateCustomDirectiveExampleComponent, NgIfComponent, NgIfAdvancedComponent, NgForComponent, NgSwitchComponent, CustomUnlessComponent, IfIosDirective, IfAndroidDirective, UnlessDirective]
 })
-
 export class NgDirectivesExamplesModule {
     constructor() { }
 }

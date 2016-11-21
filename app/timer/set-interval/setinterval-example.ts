@@ -1,11 +1,11 @@
 // >> time-picker-configure-code
 import { Component } from "@angular/core";
-import { setInterval, setTimeout, clearInterval } from "timer"
+import { setInterval, clearInterval } from "timer";
 
 @Component({
-    selector: 'set-interval',
-    styleUrls: ['./setinterval-example.css'],
-    templateUrl: './setinterval-example.html'
+    selector: "set-interval",
+    styleUrls: ["./setinterval-example.css"],
+    templateUrl: "./setinterval-example.html"
 })
 
 export class SetIntervalComponent {
@@ -17,11 +17,11 @@ export class SetIntervalComponent {
 
     constructor() {
         this.buttoncolor = "blue";
-        var that = this;
+        let that = this;
         this.id = setInterval(() => {
-            var randNumber = Math.floor(Math.random() * (that.color.length));
+            let randNumber = Math.floor(Math.random() * (that.color.length));
             that.buttoncolor = that.color[randNumber];
-        }, 1000)
+        }, 1000);
     }
 
     public onButtonTap() {
@@ -29,13 +29,12 @@ export class SetIntervalComponent {
             clearInterval(this.id);
             this.status = false;
             this.buttonText = "Enable color change";
-        }
-        else {
-            var that = this;
+        } else {
+            let that = this;
             this.id = setInterval(() => {
-                var randNumber = Math.floor(Math.random() * (that.color.length));
+                let randNumber = Math.floor(Math.random() * (that.color.length));
                 that.buttoncolor = that.color[randNumber];
-            }, 1000)
+            }, 1000);
             this.status = true;
             this.buttonText = "Disable color change";
         }

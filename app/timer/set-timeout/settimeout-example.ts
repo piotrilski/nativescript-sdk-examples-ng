@@ -1,12 +1,12 @@
 // >> settimeout-time-picker-configure-code
 import { Component } from "@angular/core";
-import { setInterval, setTimeout, clearInterval } from "timer";
+import { setTimeout } from "timer";
 import { Color } from "color";
 
 @Component({
-    selector: 'settimeout-timer-module-example',
-    styleUrls: ['./settimeout-example.css'],
-    templateUrl: './settimeout-example.html'
+    selector: "settimeout-timer-module-example",
+    styleUrls: ["./settimeout-example.css"],
+    templateUrl: "./settimeout-example.html"
 })
 
 export class SetTimeoutComponent {
@@ -17,20 +17,20 @@ export class SetTimeoutComponent {
 
     public increase(args) {
         args.object.backgroundColor = new Color("#3078FE");
-        var that = this;
+        let that = this;
         setTimeout(function () {
             that.counter++;
             args.object.backgroundColor = new Color("#30BCFF");
         }, 1000);
-        this.buttonstyle = "btn btn-rounded-sm btn-active"
+        this.buttonstyle = "btn btn-rounded-sm btn-active";
     }
     public decrease(args) {
         args.object.backgroundColor = new Color("#3078FE");
-        var that = this;
+        let that = this;
         setTimeout(function () {
             that.counter--;
             args.object.backgroundColor = new Color("#30BCFF");
-        }, 1000)
+        }, 1000);
     }
 }
 // << settimeout-time-picker-configure-code

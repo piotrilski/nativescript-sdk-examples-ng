@@ -7,11 +7,11 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: ActivityIndicatorExamplesComponent
     },
     {
-        path: 'setting-busy',
+        path: "setting-busy",
         component: SettingBusyComponent,
         data: { title: "Set busy property" }
     }
@@ -22,7 +22,6 @@ export const routerConfig = [
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [ActivityIndicatorExamplesComponent, SettingBusyComponent]
 })
-
 export class ActivityIndicatorExamplesModule {
     constructor() { }
 }

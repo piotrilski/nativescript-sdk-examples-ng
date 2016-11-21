@@ -2,12 +2,12 @@ var webpack = require("webpack");
 var nsWebpack = require("nativescript-dev-webpack");
 var sources = require("webpack-sources");
 var path = require("path");
-var CopyWebpackPlugin = require('copy-webpack-plugin');
+var CopyWebpackPlugin = require("copy-webpack-plugin");
 var fs = require("fs");
 var path = require("path");
-var BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+var BundleAnalyzerPlugin = require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
-var AotPlugin = require('@ngtools/webpack').AotPlugin;
+var AotPlugin = require("@ngtools/webpack").AotPlugin;
 
 module.exports = function (platform, destinationApp) {
     var entry = {};
@@ -57,12 +57,12 @@ module.exports = function (platform, destinationApp) {
                 },
                 {
                     test: /\.ts$/,
-                    loaders: ['@ngtools/webpack', 'aot-fix']
+                    loaders: ["@ngtools/webpack", "aot-fix"]
                 },
                 {
                     test: /\.scss$/,
                     loaders: [
-                        'raw', 'resolve-url', 'sass'
+                        "raw", "resolve-url", "sass"
                     ]
                 },
             ]
@@ -72,9 +72,9 @@ module.exports = function (platform, destinationApp) {
                 name: ["vendor"]
             }),
             new webpack.DefinePlugin({
-                global: 'global',
-                __dirname: '__dirname',
-                "global.TNS_WEBPACK": 'true',
+                global: "global",
+                __dirname: "__dirname",
+                "global.TNS_WEBPACK": "true",
             }),
             new CopyWebpackPlugin([
                 { from: "**/*.css" },
@@ -85,16 +85,16 @@ module.exports = function (platform, destinationApp) {
             ]),
             new nsWebpack.NativeScriptJsonpPlugin(),
             new AotPlugin({
-                tsConfigPath: 'tsconfig-aot.json',
-                entryModule: 'app/app.module#AppModule',
+                tsConfigPath: "tsconfig-aot.json",
+                entryModule: "app/app.module#AppModule",
                 typeChecking: false
             }),
             new BundleAnalyzerPlugin({
                 analyzerMode: "static",
                 openAnalyzer: false,
                 generateStatsFile: true,
-                reportFilename: path.join(__dirname, "report", platform + '-report.html'),
-                statsFilename: path.join(__dirname, "report", platform + '-stats.json'),
+                reportFilename: path.join(__dirname, "report", platform + "-report.html"),
+                statsFilename: path.join(__dirname, "report", platform + "-stats.json"),
             }),
             // new webpack.optimize.UglifyJsPlugin({
             //     mangle: false,

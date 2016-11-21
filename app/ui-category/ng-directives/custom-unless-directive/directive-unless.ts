@@ -1,15 +1,13 @@
-// >> directive-code  
-import { Directive, Input } from '@angular/core';
-import { TemplateRef, ViewContainerRef } from '@angular/core';
+// >> directive-code
+import { Directive, Input } from "@angular/core";
+import { TemplateRef, ViewContainerRef } from "@angular/core";
 
-@Directive({ selector: '[unless]' })
+@Directive({ selector: "[unless]" })
 
 export class UnlessDirective {
-
-  constructor(private templateRef: TemplateRef<any>, private container: ViewContainerRef) { 
-
+  constructor(private templateRef: TemplateRef<any>, private container: ViewContainerRef) {
   }
-  
+
   @Input() set unless(condition: boolean) {
     if (!condition) {
       this.container.createEmbeddedView(this.templateRef);
@@ -18,4 +16,4 @@ export class UnlessDirective {
     }
   }
 }
-// << directive-code  
+// << directive-code

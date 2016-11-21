@@ -1,7 +1,7 @@
-import { Component, ChangeDetectionStrategy, Input}  from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
 import {ObservableArray} from "data/observable-array";
 import {mockedDataArray} from "../mock-dataItems";
-import {ItemEventData} from "ui/list-view"
+
 // >> userprofile-user-feed-code
 @Component({
     selector: "user-feed",
@@ -9,10 +9,10 @@ import {ItemEventData} from "ui/list-view"
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class UserFeedExampleComponent  {
-    public countries:ObservableArray<any>;
+    public countries: ObservableArray<any>;
 
-    constructor(){
-        this.countries = new ObservableArray(mockedDataArray)
+    constructor() {
+        this.countries = new ObservableArray(mockedDataArray);
     }
 
     public onItemTapFirstList(args) {
@@ -27,7 +27,7 @@ export class UserFeedExampleComponent  {
         console.log(args.index);
     }
 
-    public followTap(){
+    public followTap() {
         console.log("follow button");
     }
 }

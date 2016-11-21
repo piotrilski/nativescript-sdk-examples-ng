@@ -1,13 +1,12 @@
 // >> disable-switch-code
 import {Component, ViewChild, ElementRef} from "@angular/core";
-import { Switch } from "ui/switch"
+import { Switch } from "ui/switch";
 
 @Component({
-    selector: 'disable-switch-component',
-    templateUrl: './disable-switch.component.html',
+    selector: "disable-switch-component",
+    templateUrl: "./disable-switch.component.html",
     styleUrls: ["../switch.style.css"],
 })
-
 export class DisableSwitchComponent {
 
     @ViewChild("sw1") firstSwitch: ElementRef;

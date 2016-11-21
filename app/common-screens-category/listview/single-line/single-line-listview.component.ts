@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, OnInit, Input}  from "@angular/core";
+import { Component, ChangeDetectionStrategy, OnInit } from "@angular/core";
 import { ItemEventData } from "ui/list-view";
 import { mockedDataArray, Country }  from "../mock-dataItems";
 
@@ -12,9 +12,7 @@ export class SingleLineListViewExampleComponent implements OnInit {
     public countries: Array<Country> = [];
 
     ngOnInit() {
-        for (var i = 0; i < mockedDataArray.length; i++) {
-            this.countries.push(mockedDataArray[i]);
-        }
+        mockedDataArray.forEach(item => this.countries.push(item));
     }
 
     onItemTapFirstList(args: ItemEventData) {

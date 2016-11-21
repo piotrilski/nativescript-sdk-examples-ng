@@ -44,7 +44,7 @@ export const routerConfig = [
 @NgModule({
     schemas: [NO_ERRORS_SCHEMA],
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
-    declarations: [FileSystemExamplesComponent, CreateExampleComponent, DeleteExampleComponent,PathsExampleComponent,ReadExampleComponent,UpdateExampleComponent]
+    declarations: [FileSystemExamplesComponent, CreateExampleComponent, DeleteExampleComponent, PathsExampleComponent, ReadExampleComponent, UpdateExampleComponent]
 })
 
 export class FetchExamplesModule {

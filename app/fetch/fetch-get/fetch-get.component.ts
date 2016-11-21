@@ -1,8 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 
 @Component({
-    selector: 'fetch-get-component',
-    templateUrl: './fetch-get.component.html'
+    selector: "fetch-get-component",
+    templateUrl: "./fetch-get.component.html"
 })
 
 export class FetchGetExampleComponent implements OnInit {
@@ -21,7 +21,7 @@ export class FetchGetExampleComponent implements OnInit {
     ngOnInit() {
         // >> fetch-res-url-code
         fetch("https://httpbin.org/get", {
-            method: 'get'
+            method: "get"
         }).then(res => {
             // Argument (res) is Response object!
         }).catch(err => {
@@ -31,7 +31,7 @@ export class FetchGetExampleComponent implements OnInit {
 
         // >> fetch-res-string-code
         fetch("https://httpbin.org/get", {
-            method: 'get'
+            method: "get"
         }).then(response => {
             return response.text();
         }).then(res => {
@@ -43,7 +43,7 @@ export class FetchGetExampleComponent implements OnInit {
 
         // >> fetch-res-json-code
         fetch("https://httpbin.org/get", {
-            method: 'get'
+            method: "get"
         }).then(response => {
             return response.json();
         }).then(res => {
@@ -66,7 +66,7 @@ export class FetchGetExampleComponent implements OnInit {
 
         // >> fetch-res-form-code
         fetch("https://httpbin.org/get", {
-            method: 'get'
+            method: "get"
         }).then(response => {
             return response.formData();
         }).then(res => {
@@ -78,7 +78,7 @@ export class FetchGetExampleComponent implements OnInit {
 
         // >> fetch-res-status-code
         fetch("https://httpbin.org/get", {
-            method: 'get'
+            method: "get"
         }).then(response => {
             this.status = response.status;
             this.statusText = response.statusText;
@@ -89,7 +89,7 @@ export class FetchGetExampleComponent implements OnInit {
 
         // >> fetch-res-headers-code
         fetch("https://httpbin.org/get", {
-            method: 'get'
+            method: "get"
         }).then(response => {
             this.typeHeader = response.headers.get("Content-Type");
             this.dateHeader = response.headers.get("Date");

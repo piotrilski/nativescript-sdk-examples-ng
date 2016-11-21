@@ -8,16 +8,16 @@ import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.modu
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: LocationExamplesComponent
     },
     {
-        path: 'location',
+        path: "location",
         component: BasicLocationExampleComponent,
         data: { title: "Location" }
     },
     {
-        path: 'location-monitoring',
+        path: "location-monitoring",
         component: LocationMonitoringExampleComponent,
         data: { title: "Location monitoring" }
     }

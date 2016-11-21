@@ -9,21 +9,21 @@ import { TitleAndNavButtonModule } from "../../directives/title-and-nav-button.m
 
 export const routerConfig = [
     {
-        path: '',
+        path: "",
         component: SearchBarExamplesComponent
     },
     {
-        path: 'basic',
+        path: "basic",
         component: BasicSearchBarComponent,
         data: { title: "Basic SearchBar" }
     },
     {
-        path: 'clear',
+        path: "clear",
         component: ClearSearchBarComponent,
         data: { title: "Clear SearchBar" }
     },
     {
-        path: 'binding',
+        path: "binding",
         component: SearchBarBindingComponent,
         data: { title: "SearchBar property binding" }
     }
@@ -34,7 +34,6 @@ export const routerConfig = [
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [SearchBarExamplesComponent, BasicSearchBarComponent, ClearSearchBarComponent, SearchBarBindingComponent]
 })
-
 export class SearchBarExamplesModule {
     constructor() { }
 }

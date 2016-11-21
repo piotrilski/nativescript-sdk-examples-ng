@@ -9,7 +9,7 @@ import * as dialogs from "ui/dialogs";
 export class ConfirmDialogComponent {
     displayConfirmDialog() {
         // >> confirm-dialog-code
-        var options = {
+        let options = {
             title: "Race selection",
             message: "Are you sure you want to be a Unicorn?",
             okButtonText: "Yes",

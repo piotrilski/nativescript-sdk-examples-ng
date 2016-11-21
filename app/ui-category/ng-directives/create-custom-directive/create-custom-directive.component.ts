@@ -1,5 +1,5 @@
-// >> custom-directive-code  
-import {Component, Directive, ViewContainerRef, TemplateRef, Inject} from '@angular/core';
+// >> custom-directive-code
+import {Component, Directive, ViewContainerRef, TemplateRef, Inject} from "@angular/core";
 import {Device, platformNames} from "platform";
 import {DEVICE} from "nativescript-angular/platform-providers";
 
@@ -22,11 +22,9 @@ export class IfIosDirective {
 }
 
 @Component({
-    selector: 'create-custom-directive',
+    selector: "create-custom-directive",
     templateUrl: "./create-custom-directive.component.html",
 })
-
 export class CreateCustomDirectiveExampleComponent {
-
 }
 // << custom-directive-code

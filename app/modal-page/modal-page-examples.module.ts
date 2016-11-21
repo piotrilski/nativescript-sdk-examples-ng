@@ -22,7 +22,6 @@ export const routerConfig = [
     imports: [TitleAndNavButtonModule, NativeScriptModule, NativeScriptRouterModule, NativeScriptRouterModule.forChild(routerConfig)],
     declarations: [ModalPageExamplesComponent, SampleModalPageModuleExampleComponent]
 })
-
 export class ModalPageExamplesModule {
     constructor() { }
 }

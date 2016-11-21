@@ -4,6 +4,7 @@
 /lib
 /debugger
 /dist
+/report
 
 /app/**/*.map
 /app/**/*.js
