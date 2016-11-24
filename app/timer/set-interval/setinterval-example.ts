@@ -5,6 +5,7 @@ import { setInterval, clearInterval } from "timer";
 @Component({
     selector: "set-interval",
     styleUrls: ["./setinterval-example.css"],
+    moduleId: module.id,
     templateUrl: "./setinterval-example.html"
 })
 

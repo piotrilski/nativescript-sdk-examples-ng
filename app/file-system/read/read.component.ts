@@ -6,6 +6,7 @@ import * as fs from "file-system";
 
 @Component({
     selector: "read-file-component",
+    moduleId: module.id,
     templateUrl: "./read.component.html"
 })
 export class ReadExampleComponent {

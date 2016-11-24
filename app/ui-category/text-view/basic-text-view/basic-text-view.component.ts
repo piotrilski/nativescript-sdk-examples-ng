@@ -8,6 +8,7 @@ import { isAndroid } from "platform";
     // >> (hide)
     styleUrls: ["./style.css"],
     // << (hide)
+    moduleId: module.id,
     templateUrl: "./basic-text-view.component.html"
 })
 export class BasicTextViewComponent {

@@ -3,6 +3,7 @@ import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
     selector: "navigation-button-component",
+    moduleId: module.id,
     templateUrl: "./navigation-button.component.html"
 })
 export class NavigationButtonComponent {

@@ -9,6 +9,7 @@ let menuLinks = [
 
 @Component({
     selector: "switch-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     styleUrls: ["./switch.style.css"],
     changeDetection: ChangeDetectionStrategy.OnPush

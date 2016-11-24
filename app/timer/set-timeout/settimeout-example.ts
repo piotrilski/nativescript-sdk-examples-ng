@@ -6,6 +6,7 @@ import { Color } from "color";
 @Component({
     selector: "settimeout-timer-module-example",
     styleUrls: ["./settimeout-example.css"],
+    moduleId: module.id,
     templateUrl: "./settimeout-example.html"
 })
 

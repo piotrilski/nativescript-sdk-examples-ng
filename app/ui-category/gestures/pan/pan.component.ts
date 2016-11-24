@@ -5,6 +5,7 @@ import { PanGestureEventData } from "ui/gestures";
 
 @Component({
     selector: "pan-gesture",
+    moduleId: module.id,
     templateUrl: "./pan.component.html"
 })
 export class PanExampleComponent {

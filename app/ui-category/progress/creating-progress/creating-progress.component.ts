@@ -3,6 +3,7 @@ import { Component, OnInit }  from "@angular/core";
 
 @Component({
     selector: "creating-progress",
+    moduleId: module.id,
     templateUrl: "./creating-progress.component.html",
 })
 export class CreatingProgressComponent implements OnInit {

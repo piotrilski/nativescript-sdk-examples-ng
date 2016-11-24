@@ -4,6 +4,7 @@ import * as fs from "file-system";
 // << fs-update-import-code
 @Component({
     selector: "update-file-component",
+    moduleId: module.id,
     templateUrl: "./update.component.html"
 })
 

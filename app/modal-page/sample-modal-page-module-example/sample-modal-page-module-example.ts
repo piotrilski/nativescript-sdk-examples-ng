@@ -7,6 +7,7 @@ import { ModalViewComponent } from "./modal-view";
     providers: [ModalDialogService],
     selector: "sample-modal-page-module-component",
     styleUrls: ["./sample-modal-page-module-example.css"],
+    moduleId: module.id,
     templateUrl: "./sample-modal-page-module-example.html"
 })
 export class SampleModalPageModuleExampleComponent {

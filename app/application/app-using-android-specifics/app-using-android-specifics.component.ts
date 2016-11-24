@@ -4,6 +4,7 @@ import * as application from "application";
 
 @Component({
     selector: "app-android-specifics-component",
+    moduleId: module.id,
     templateUrl: "./app-using-android-specifics.component.html"
 })
 

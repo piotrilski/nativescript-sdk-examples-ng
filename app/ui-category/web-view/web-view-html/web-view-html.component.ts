@@ -6,6 +6,7 @@ import {Component} from "@angular/core";
     // >> (hide)
     styleUrls: ["../style.css"],
     // << (hide)
+    moduleId: module.id,
     templateUrl: "./web-view-html.component.html",
 })
 export class WebViewHtmlComponent {

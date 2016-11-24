@@ -3,6 +3,7 @@ import { RouterExtensions } from "nativescript-angular/router";
 
 @Component({
     selector: "action-bar-component",
+    moduleId: module.id,
     templateUrl: "./action-items.component.html"
 })
 export class ActionItemsComponent {

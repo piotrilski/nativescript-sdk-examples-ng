@@ -5,6 +5,7 @@ import { mockedDataArray } from "../mock-dataItems";
 // >> ext-listview-cards-code
 @Component({
     selector: "cards-listview",
+    moduleId: module.id,
     templateUrl: "./cards-listview.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

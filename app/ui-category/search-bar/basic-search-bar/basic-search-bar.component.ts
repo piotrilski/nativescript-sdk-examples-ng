@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "basic-search-bar-component",
+    moduleId: module.id,
     templateUrl: "./basic-search-bar.component.html"
 })
 export class BasicSearchBarComponent {

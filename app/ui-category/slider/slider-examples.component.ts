@@ -8,6 +8,7 @@ let menuLinks = [
 
 @Component({
     selector: "slider-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

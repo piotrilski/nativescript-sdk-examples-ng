@@ -4,6 +4,7 @@ import { DatePicker } from "ui/date-picker";
 
 @Component({
     selector: "date-picker-component",
+    moduleId: module.id,
     templateUrl: "./configure-date-picker.component.html"
 })
 export class ConfigureDatePickerComponent {

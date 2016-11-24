@@ -6,6 +6,7 @@ import { mockedDataArray, mockedGroupDataArray, Country }  from "../mock-dataIte
 
 @Component({
     selector: "multi-line-big-listview",
+    moduleId: module.id,
     templateUrl: "./multi-line-big.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

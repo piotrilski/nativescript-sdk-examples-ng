@@ -4,6 +4,7 @@ import { SegmentedBarItem } from "ui/segmented-bar";
 
 @Component({
     selector: "basic-segmented-bar-component",
+    moduleId: module.id,
     templateUrl: "./basic-segmented-bar.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

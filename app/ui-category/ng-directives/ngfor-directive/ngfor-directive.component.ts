@@ -5,6 +5,7 @@ import { fruits } from "./fruits";
 // >> ngfor-bind-items-code
 @Component({
     selector: "ngfor-directive",
+    moduleId: module.id,
     templateUrl: "./ngfor-directive.component.html",
 })
 

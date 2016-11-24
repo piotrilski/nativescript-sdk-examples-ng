@@ -3,6 +3,7 @@ import * as dialogs from "ui/dialogs";
 
 @Component({
     selector: "action-dialog-component",
+    moduleId: module.id,
     templateUrl: "./action-dialog.component.html"
 })
 

@@ -5,6 +5,7 @@ import * as connectivity from "connectivity";
 
 @Component({
     selector: "using-connectivity-component",
+    moduleId: module.id,
     templateUrl: "./using-connectivity.component.html"
 })
 export class UsingConnectivityExampleComponent implements OnInit, OnDestroy {

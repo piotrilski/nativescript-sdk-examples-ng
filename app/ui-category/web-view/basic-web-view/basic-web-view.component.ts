@@ -6,6 +6,7 @@ import {TextField} from "ui/text-field";
 
 @Component({
     selector: "basic-web-view-component",
+    moduleId: module.id,
     templateUrl: "./basic-web-view.component.html",
     styleUrls: ["./style.css"]
 })

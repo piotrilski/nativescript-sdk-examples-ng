@@ -6,6 +6,7 @@ import * as enums from "ui/enums";
 
 @Component({
     selector: "animations-component",
+    moduleId: module.id,
     templateUrl: "./animating-properties.component.html"
 })
 

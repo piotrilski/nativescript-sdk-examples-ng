@@ -23,6 +23,7 @@ export class IfIosDirective {
 
 @Component({
     selector: "create-custom-directive",
+    moduleId: module.id,
     templateUrl: "./create-custom-directive.component.html",
 })
 export class CreateCustomDirectiveExampleComponent {

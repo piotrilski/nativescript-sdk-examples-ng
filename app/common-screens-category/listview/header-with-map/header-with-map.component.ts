@@ -9,6 +9,7 @@ import {isAndroid} from "platform";
 declare var com: any;
 @Component({
     selector: "header-with-map-listview",
+    moduleId: module.id,
     templateUrl: "./header-with-map.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

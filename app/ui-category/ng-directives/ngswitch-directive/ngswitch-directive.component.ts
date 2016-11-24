@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "ngswitch-directive",
+    moduleId: module.id,
     templateUrl: "./ngswitch-directive.component.html",
 })
 

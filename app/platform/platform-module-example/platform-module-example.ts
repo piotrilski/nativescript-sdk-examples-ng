@@ -30,6 +30,7 @@ class ScreenInfo {
 @Component({
     selector: "platform-module-component",
     styleUrls: ["./style.css"],
+    moduleId: module.id,
     templateUrl: "./platform-module-example.html"
 })
 export class PlatformModuleExampleComponent {

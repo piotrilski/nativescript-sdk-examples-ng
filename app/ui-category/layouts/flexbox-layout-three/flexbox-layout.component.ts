@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: "flexbox-layout-three-component",
+    moduleId: module.id,
     templateUrl: "./flexbox-layout.component.html"
 })
 export class FlexboxLayoutComponentThree implements OnInit {

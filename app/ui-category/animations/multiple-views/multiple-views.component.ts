@@ -10,6 +10,7 @@ let view4: View;
 
 @Component({
     selector: "animations-component",
+    moduleId: module.id,
     templateUrl: "./multiple-views.component.html",
     styleUrls: ["../style.css"],
 })

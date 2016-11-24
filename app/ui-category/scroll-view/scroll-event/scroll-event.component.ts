@@ -8,6 +8,7 @@ import { ScrollEventData } from "ui/scroll-view";
     // >> (hide)
     styleUrls: ["./style.css"],
     // << (hide)
+    moduleId: module.id,
     templateUrl: "./scroll-event.component.html"
 })
 export class ScrollEventComponent {

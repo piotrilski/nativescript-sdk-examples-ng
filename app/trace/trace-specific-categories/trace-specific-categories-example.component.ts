@@ -7,6 +7,7 @@ import { setTimeout } from "timer";
 @Component({
     selector: "trace-writer-categories",
     styleUrls: ["./style.css"],
+    moduleId: module.id,
     templateUrl: "./trace-specific-categories-example.component.html"
 })
 export class TraceSpecificCategoriesExampleComponent {

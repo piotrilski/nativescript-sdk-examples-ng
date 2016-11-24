@@ -9,6 +9,7 @@ let menuLinks = [
 
 @Component({
     selector: "action-bar-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

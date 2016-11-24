@@ -5,6 +5,7 @@ import {mockedDataArray} from "../mock-dataItems";
 // >> userprofile-user-feed-code
 @Component({
     selector: "user-feed",
+    moduleId: module.id,
     templateUrl: "./user-feed.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

@@ -5,6 +5,7 @@ import {request} from "http";
 
 @Component({
     selector: "http-post-component",
+    moduleId: module.id,
     templateUrl: "./http-post.html"
 })
 export class HttpPostComponent {

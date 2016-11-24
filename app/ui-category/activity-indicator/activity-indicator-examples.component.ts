@@ -7,6 +7,7 @@ let menuLinks = [
 
 @Component({
     selector: "activity-indicator-examples-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

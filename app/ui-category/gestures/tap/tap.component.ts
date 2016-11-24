@@ -5,6 +5,7 @@ import { GestureEventData } from "ui/gestures";
 
 @Component({
     selector: "tap-gestures",
+    moduleId: module.id,
     templateUrl: "./tap.component.html"
 })
 export class TapExampleComponent {

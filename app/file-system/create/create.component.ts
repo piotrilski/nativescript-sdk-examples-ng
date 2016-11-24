@@ -5,6 +5,7 @@ import * as fs from "file-system";
 
 @Component({
     selector: "create-file-component",
+    moduleId: module.id,
     templateUrl: "./create.component.html"
 })
 export class CreateExampleComponent {

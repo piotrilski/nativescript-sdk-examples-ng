@@ -12,6 +12,7 @@ let menuLinks = [
 
 @Component({
     selector: "ng-directives-examples-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

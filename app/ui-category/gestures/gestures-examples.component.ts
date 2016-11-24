@@ -14,6 +14,7 @@ let menuLinks = [
 
 @Component({
     selector: "gestures-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

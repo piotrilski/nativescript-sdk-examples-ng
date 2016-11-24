@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "basic-switch-component",
+    moduleId: module.id,
     templateUrl: "./basic-switch.component.html",
     styleUrls: ["../switch.style.css"],
 })

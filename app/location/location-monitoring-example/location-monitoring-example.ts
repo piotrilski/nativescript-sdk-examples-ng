@@ -6,6 +6,7 @@ import { Location, enableLocationRequest, watchLocation, clearWatch } from "nati
 @Component({
     selector: "location-monitoring-example",
     styleUrls: ["./style.css"],
+    moduleId: module.id,
     templateUrl: "./location-monitoring-example.html"
 })
 export class LocationMonitoringExampleComponent {

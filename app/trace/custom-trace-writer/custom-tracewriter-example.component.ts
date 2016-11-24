@@ -37,6 +37,7 @@ class TimestampConsoleWriter {
 @Component({
     selector: "custom-tracewriter-example-component",
     styleUrls: ["./style.css"],
+    moduleId: module.id,
     templateUrl: "./custom-tracewriter-example.component.html",
 })
 export class CustomTraceWriterExampleComponent {

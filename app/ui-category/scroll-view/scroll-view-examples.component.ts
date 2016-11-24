@@ -9,6 +9,7 @@ let menuLinks = [
 
 @Component({
     selector: "scroll-view-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

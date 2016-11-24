@@ -4,6 +4,7 @@ import { Switch } from "ui/switch";
 
 @Component({
     selector: "disable-switch-component",
+    moduleId: module.id,
     templateUrl: "./disable-switch.component.html",
     styleUrls: ["../switch.style.css"],
 })

@@ -7,6 +7,7 @@ import { Page } from "ui/page";
 @Component({
     selector: "modal-view",
     styleUrls: ["./modal-view.css"],
+    moduleId: module.id,
     templateUrl: "./modal-view.html"
 })
 export class ModalViewComponent implements OnInit {

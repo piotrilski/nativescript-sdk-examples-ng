@@ -9,6 +9,7 @@ let menuLinks = [
 
 @Component({
     selector: "extended-dataentry-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

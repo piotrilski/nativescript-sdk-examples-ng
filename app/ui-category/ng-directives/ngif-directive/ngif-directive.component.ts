@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "ngif-directive",
+    moduleId: module.id,
     templateUrl: "./ngif-directive.component.html",
 })
 export class NgIfComponent {

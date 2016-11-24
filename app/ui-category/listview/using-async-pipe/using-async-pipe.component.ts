@@ -9,6 +9,7 @@ export class DataItem {
 @Component({
     selector: "list-test-async",
     styleUrls: ["./using-async-pipe.component.css"],
+    moduleId: module.id,
     templateUrl: "./using-async-pipe.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush,
 })

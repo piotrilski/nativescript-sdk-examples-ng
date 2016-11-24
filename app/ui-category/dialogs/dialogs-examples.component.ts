@@ -11,6 +11,7 @@ let menuLinks = [
 
 @Component({
     selector: "dialog-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

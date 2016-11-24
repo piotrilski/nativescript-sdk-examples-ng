@@ -7,6 +7,7 @@ let menuLinks = [
 
 @Component({
     selector: "htmlview-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

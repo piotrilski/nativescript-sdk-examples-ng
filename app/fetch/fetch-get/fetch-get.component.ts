@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: "fetch-get-component",
+    moduleId: module.id,
     templateUrl: "./fetch-get.component.html"
 })
 

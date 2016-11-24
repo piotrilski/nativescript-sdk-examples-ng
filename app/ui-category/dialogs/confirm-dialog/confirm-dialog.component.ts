@@ -3,6 +3,7 @@ import * as dialogs from "ui/dialogs";
 
 @Component({
     selector: "confirm-dialog-component",
+    moduleId: module.id,
     templateUrl: "./confirm-dialog.component.html"
 })
 

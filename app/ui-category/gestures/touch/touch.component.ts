@@ -4,6 +4,7 @@ import { TouchGestureEventData } from "ui/gestures";
 
 @Component({
     selector: "touch-gesture",
+    moduleId: module.id,
     templateUrl: "./touch.component.html"
 })
 export class TouchExampleComponent {

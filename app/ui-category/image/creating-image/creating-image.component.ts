@@ -9,6 +9,7 @@ import * as ImageSourceModule from "image-source";
 @Component({
     selector: "creating-image",
     styleUrls: ["./creating-image.component.css"],
+    moduleId: module.id,
     templateUrl: "./creating-image.component.html"
 })
 

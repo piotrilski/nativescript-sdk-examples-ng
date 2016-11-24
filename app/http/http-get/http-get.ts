@@ -10,6 +10,7 @@ import { Image } from "ui/image";
 
 @Component({
     selector: "http-get-component",
+    moduleId: module.id,
     templateUrl: "./http-get.html"
 })
 

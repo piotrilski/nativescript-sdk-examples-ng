@@ -9,6 +9,7 @@ let menuLinks = [
 
 @Component({
     selector: "search-bar-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

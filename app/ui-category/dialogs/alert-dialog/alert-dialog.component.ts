@@ -3,6 +3,7 @@ import * as dialogs from "ui/dialogs";
 
 @Component({
     selector: "alert-dialog-component",
+    moduleId: module.id,
     templateUrl: "./alert-dialog.component.html"
 })
 

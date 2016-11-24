@@ -6,6 +6,7 @@ import { GestureEventData } from "ui/gestures";
 
 @Component({
     selector: "long-press-gesture",
+    moduleId: module.id,
     templateUrl: "./long-press.component.html"
 })
 export class LongPressExampleComponent {

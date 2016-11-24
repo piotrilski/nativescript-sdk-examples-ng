@@ -4,6 +4,7 @@ import { Page } from "ui/page";
 
 @Component({
     selector: "button-component",
+    moduleId: module.id,
     templateUrl: "./text.component.html"
 })
 export class ButtonTextComponent implements OnInit {

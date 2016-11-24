@@ -4,6 +4,7 @@ import { Progress } from "ui/progress";
 
 @Component({
     selector: "setting-progress",
+    moduleId: module.id,
     templateUrl: "./setting-progress.component.html",
 })
 export class SettingProgressComponent implements OnInit {

@@ -4,6 +4,7 @@ import * as utils from "utils/utils";
 
 @Component({
     selector: "app-ios-specifics-component",
+    moduleId: module.id,
     templateUrl: "./app-using-ios-specifics.component.html"
 })
 export class AppUsingIosExampleComponent {

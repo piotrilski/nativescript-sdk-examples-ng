@@ -7,6 +7,7 @@ import { FlexboxLayout } from "ui/layouts/flexbox-layout";
 // >> content-paralax-page-code
 @Component({
     selector: "content-scrollable-page-listview",
+    moduleId: module.id,
     templateUrl: "./content-scrollable-example.component.html"
 })
 export class ContentScrollablePageExampleComponent implements OnInit {

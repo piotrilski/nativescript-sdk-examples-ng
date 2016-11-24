@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "style-css-file-component",
+    moduleId: module.id,
     templateUrl: "./style-css-file.component.html",
     styleUrls: ["./style.css"]
 })

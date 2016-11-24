@@ -5,6 +5,7 @@ import { RotationGestureEventData } from "ui/gestures";
 
 @Component({
     selector: "rotation-gesture",
+    moduleId: module.id,
     templateUrl: "./rotation.component.html"
 })
 export class RotationExampleComponent {

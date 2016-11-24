@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy }  from "@angular/core";
 // >> dataentry-wellcome-login-code
 @Component({
     selector: "dataentry-welcome-listview",
+    moduleId: module.id,
     templateUrl: "./dataentry-welcome.component.html",
     styleUrls: ["./style.css"],
     changeDetection: ChangeDetectionStrategy.OnPush

@@ -9,6 +9,7 @@ let menuLinks = [
 
 @Component({
     selector: "extended-userprofile-component",
+    moduleId: module.id,
     templateUrl: "../../examples-list.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

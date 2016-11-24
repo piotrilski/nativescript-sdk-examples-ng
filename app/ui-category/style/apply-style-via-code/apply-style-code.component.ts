@@ -6,6 +6,7 @@ import { Label } from "ui/label";
 
 @Component({
     selector: "apply-style-code-component",
+    moduleId: module.id,
     templateUrl: "./apply-style-code.component.html"
 })
 export class ApplyStyleCodeComponent implements OnInit {

@@ -6,6 +6,7 @@ import { Location, getCurrentLocation, isEnabled, distance, enableLocationReques
 @Component({
     selector: "basic-location-example",
     styleUrls: ["./style.css"],
+    moduleId: module.id,
     templateUrl: "./basic-location-example.html"
 })
 export class BasicLocationExampleComponent {

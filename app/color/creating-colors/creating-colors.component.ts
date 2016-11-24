@@ -18,6 +18,7 @@ export class HexPipe implements PipeTransform {
 
 @Component({
     selector: "creating-colors-component",
+    moduleId: module.id,
     templateUrl: "./creating-colors.component.html"
 })
 export class CreatingColorsExampleComponent {

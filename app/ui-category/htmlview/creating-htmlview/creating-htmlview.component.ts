@@ -3,6 +3,7 @@ import { Component}  from "@angular/core";
 
 @Component({
     selector: "creating-htmlview",
+    moduleId: module.id,
     templateUrl: "./creating-htmlview.component.html"
 })
 

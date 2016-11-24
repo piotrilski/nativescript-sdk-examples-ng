@@ -5,6 +5,7 @@ import * as fs from "file-system";
 
 @Component({
     selector: "delete-file-component",
+    moduleId: module.id,
     templateUrl: "./delete.component.html"
 })
 export class DeleteExampleComponent {

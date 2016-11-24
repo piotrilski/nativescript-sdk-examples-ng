@@ -2,6 +2,7 @@ import { Component, ChangeDetectionStrategy }  from "@angular/core";
 
 @Component({
     selector: "dataentry-sociallogin",
+    moduleId: module.id,
     templateUrl: "./dataentry-sociallogin.component.html",
     styleUrls: ["./style.css"],
     changeDetection: ChangeDetectionStrategy.OnPush

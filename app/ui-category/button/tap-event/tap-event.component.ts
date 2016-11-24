@@ -3,6 +3,7 @@ import { EventData } from "data/observable";
 
 @Component({
     selector: "button-component",
+    moduleId: module.id,
     templateUrl: "./tap-event.component.html"
 })
 export class ButtonTapEventComponent {

@@ -3,6 +3,7 @@ import { Component }  from "@angular/core";
 
 @Component({
     selector: "creating-label",
+    moduleId: module.id,
     templateUrl: "./creating-label.component.html"
 })
 export class CreatingLabelComponent {

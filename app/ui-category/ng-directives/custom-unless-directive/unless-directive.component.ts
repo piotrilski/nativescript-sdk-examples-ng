@@ -3,6 +3,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "custom-unless-directive",
+    moduleId: module.id,
     templateUrl: "./unless-directive.component.html",
 })
 export class CustomUnlessComponent {

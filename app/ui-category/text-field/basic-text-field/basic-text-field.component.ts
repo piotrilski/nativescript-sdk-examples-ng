@@ -10,6 +10,7 @@ import {setTimeout} from "timer";
     // >> (hide)
     styleUrls: ["../text-field.style.css"],
     // << (hide)
+    moduleId: module.id,
     templateUrl: "./basic-text-field.component.html"
 })
 export class BasicTextFieldComponent {

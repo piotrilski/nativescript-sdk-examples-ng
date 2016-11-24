@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: "button-component",
+    moduleId: module.id,
     templateUrl: "./binding-text.component.html"
 })
 export class ButtonBindingTextComponent {

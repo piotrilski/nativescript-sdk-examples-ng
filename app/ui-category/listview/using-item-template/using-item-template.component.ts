@@ -16,6 +16,7 @@ export class ItemComponent {
 
 @Component({
     selector: "using-item-template",
+    moduleId: module.id,
     templateUrl: "./using-item-template.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

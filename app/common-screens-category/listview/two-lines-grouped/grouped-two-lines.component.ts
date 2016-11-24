@@ -5,6 +5,7 @@ import { mockedGroupDataArray } from "../mock-dataItems";
 // >> grouped-listview-two-lines-code
 @Component({
     selector: "grouped-two-line-listview",
+    moduleId: module.id,
     templateUrl: "./grouped-two-lines.component.html",
     changeDetection: ChangeDetectionStrategy.OnPush
 })

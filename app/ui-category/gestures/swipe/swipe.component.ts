@@ -4,6 +4,7 @@ import { SwipeGestureEventData } from "ui/gestures";
 
 @Component({
     selector: "swipe-gesture",
+    moduleId: module.id,
     templateUrl: "./swipe.component.html"
 })
 export class SwipeExampleComponent {

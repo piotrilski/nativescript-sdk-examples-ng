@@ -4,6 +4,7 @@ import * as application from "application";
 
 @Component({
     selector: "ngif-directive-advanced",
+    moduleId: module.id,
     templateUrl: "./ngif-directive-advanced.component.html",
 })
 

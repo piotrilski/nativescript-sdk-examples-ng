@@ -5,6 +5,7 @@ import * as application from "application";
 
 @Component({
     selector: "app-check-target-component",
+    moduleId: module.id,
     templateUrl: "./app-checking-target.component.html"
 })
 
