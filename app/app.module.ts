@@ -1,10 +1,12 @@
 // this import should be first in order to load some required settings (like globals and reflect-metadata)
 // >> ngmodule-config
 // >> (hide)
+import { Preload } from "./custom-preloading-strategy";
 import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 import { NgModule, NgModuleFactoryLoader, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptRouterModule } from "nativescript-angular/router";
 import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { RouterModule, PreloadAllModules, NoPreloading } from "@angular/router";
 
 import { routes } from "./app.routes";
 import { AppComponent } from "./app.component";
@@ -16,21 +18,28 @@ import { ModalViewComponent } from "./modal-page/sample-modal-page-module-exampl
 import { TnsGoogleMaps } from "nativescript-googlemaps";
 import { isIOS } from "platform";
 
+import { ExamplesListComponent } from "./examples-list.component";
+
+
 @NgModule({
     schemas: [NO_ERRORS_SCHEMA],
     declarations: [
         AppComponent,
         // << (hide)
-        ModalViewComponent
+        ModalViewComponent,
+        ExamplesListComponent
     ],
     bootstrap: [AppComponent],
     imports: [
         NativeScriptModule,
         NativeScriptFormsModule,
         NativeScriptRouterModule,
-        NativeScriptRouterModule.forRoot(routes),
+        RouterModule.forRoot(routes, {
+            preloadingStrategy: Preload
+        }),
     ],
     providers: [
+        Preload,
         ModalDialogService,
         { provide: NgModuleFactoryLoader, useClass: NsModuleFactoryLoader }
     ],

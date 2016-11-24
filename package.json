@@ -1,5 +1,5 @@
 {
-    "name": "nativescript-sdk-examples-ng",
+    "name": "nativescript-sdk-examples-ng-no-preload",
     "description": "NativeScript & Angular 2 SDK Examples",
     "author": "Telerik <support@telerik.com>",
     "version": "0.1.0",
