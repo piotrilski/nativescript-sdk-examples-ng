@@ -35,6 +35,7 @@ import { ExamplesListComponent } from "./examples-list.component";
         NativeScriptFormsModule,
         NativeScriptRouterModule,
         RouterModule.forRoot(routes, {
+            // preloadingStrategy: NoPreloading
             preloadingStrategy: Preload
         }),
     ],
