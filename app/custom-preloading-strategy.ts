@@ -3,6 +3,58 @@ import { _throw } from "rxjs/observable/throw";
 import { _catch } from "rxjs/operator/catch";
 import { Observable } from "rxjs";
 
+import * as utils from "utils/utils";
+import {isAndroid, isIOS} from "platform";
+
+declare var interop, NSPostWhenIdle;
+
+let requestIdleFrame: (callback: () => void) => void;
+if (isAndroid) {
+    console.log("TODO: requestIdleFrame for Android");
+    requestIdleFrame = cb => cb();
+} else if (isIOS) {
+    const queue = [];
+
+    class TNSIdleHandler extends NSObject {
+        public static ObjCExposedMethods = {
+            "receiveIdleNotification": { returns: interop.types.void, params: [] }
+        };
+        receiveIdleNotification() {
+            idleNotificationPosted = false;
+            // console.log("Idle! handle something from the idle queue!");
+            try {
+                queue.shift()();
+            } catch(e) {
+                console.log("Error executing on idle frame: " + e);
+                console.log(e.stack);
+            }
+            if (queue.length > 0) {
+                postIdleNotification();
+            } else {
+                console.log("idle frames drained");
+            }
+        }
+    }
+
+    const target = TNSIdleHandler.alloc().init();
+    utils.ios.getter(NSNotificationCenter, NSNotificationCenter.defaultCenter).addObserverSelectorNameObject(target, "receiveIdleNotification", "org.nativescript.idle-notification", null);
+    const idleNotification = NSNotification.notificationWithNameObject("org.nativescript.idle-notification", target);
+    let idleNotificationPosted: boolean = false;
+
+    let postIdleNotification = () => {
+        utils.ios.getter(NSNotificationQueue, NSNotificationQueue.defaultQueue).enqueueNotificationPostingStyle(idleNotification, NSPostWhenIdle);
+        idleNotificationPosted = true;
+    }
+
+    requestIdleFrame = callback => {
+        queue.push(callback);
+        if (!idleNotificationPosted) {
+            console.log("enqueued idle frames");
+            postIdleNotification();
+        }
+    }
+}
+
 export class Preload implements PreloadingStrategy {
     private loadedPaths: string[];
     private queue: { route: Route, load: Function, observable: Observable<any> }[];
@@ -18,65 +70,16 @@ export class Preload implements PreloadingStrategy {
             return Observable.of(null);
         }
         let observable = Observable.of(null);
-        this.loadedPaths.push(route.path);
 
-        console.log("push: " + route.path);
-        this.queue.push({ route, load, observable });
-        this.start();
+        requestIdleFrame(() => {
+            var msg = "preloading " + route.path;
+            var start = Date.now();
+            load();
+            this.loadedPaths.push(route.path);
+            var end = Date.now();
+            console.log(msg + " in " + (end - start));
+        });
 
         return observable;
-        // return _catch.call(load(), () => Observable.of(null));
     }
-
-    private start() {
-        if (this.queue.length !== 1) {
-            return;
-        }
-
-        android.os.Looper.myQueue().addIdleHandler(new android.os.MessageQueue.IdleHandler({
-            queueIdle: () => {
-                console.log("tick");
-                return true;
-                // let { load, route } = this.queue.shift(); // tslint:disable-line:no-shadowed-variable
-                // let start = Date.now();
-                // console.log(`loading... ${route.path}`);
-
-                // load();
-                // this.loadedPaths.push(route.path);
-
-                // let end = Date.now();
-                // console.log(`path loaded... ${route.path}`);
-                // console.log(`Time: ${end - start} ms...`);
-
-                // return this.queue.length > 0;
-            }
-        }));
-    }
-
-    // private start() {
-    //     this.intervalKey = this.intervalKey || setInterval(() => this.preload2(), 100);
-    //     console.log("intervalKey: " + this.intervalKey);
-    // }
-
-    // private stop() {
-    //     clearInterval(this.intervalKey);
-    // }
-
-    // private preload2() {
-    //     console.log(this.queue);
-    //     // if (this.queue.length === 0) {
-    //     //     this.stop();
-    //     //     return;
-    //     // }
-    //     let { load, route } = this.queue.shift();
-    //     let start = Date.now();
-    //     console.log(`loading... ${route.path}`);
-
-    //     load();
-    //     this.loadedPaths.push(route.path);
-
-    //     let end = Date.now();
-    //     console.log(`path loaded... ${route.path}`);
-    //     console.log(`Time: ${end - start} ms...`);
-    // }
 }
