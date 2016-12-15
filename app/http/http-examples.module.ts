@@ -8,6 +8,8 @@ import { HttpExamplesComponent } from "./http-examples.component";
 
 import { HttpGetComponent } from "./http-get/http-get.component";
 import { HttpPostComponent } from "./http-post/http-post.component";
+import { SaveDownloadedFileComponent } from "./save-file/save-file.component";
+
 import { TitleAndNavButtonModule } from "../directives/title-and-nav-button.module";
 
 export const routerConfig = [
@@ -17,11 +19,18 @@ export const routerConfig = [
     },
     {
         path: "http-get",
-        component: HttpGetComponent
+        component: HttpGetComponent,
+        data: { title: "HTTP Get" }
     },
     {
         path: "http-post",
-        component: HttpPostComponent
+        component: HttpPostComponent,
+        data: { title: "HTTP Post" }
+    },
+    {
+        path: "save-file",
+        component: SaveDownloadedFileComponent,
+        data: { title: "Save File" }
     }
 ];
 
@@ -38,7 +47,8 @@ export const routerConfig = [
     declarations: [
         HttpExamplesComponent,
         HttpGetComponent,
-        HttpPostComponent
+        HttpPostComponent,
+        SaveDownloadedFileComponent
     ]
 })
 
